@@ -32,7 +32,8 @@ namespace WebAPI.Controllers
 
         // GET: api/<TodoController>
         [HttpGet]
-        public IEnumerable<TodoListDto> Get([FromQuery] TodoSelectParameter value)
+        //public IEnumerable<TodoListDto> Get([FromQuery] TodoSelectParameter value)
+        public IActionResult Get([FromQuery] TodoSelectParameter value)
         {
             var result = _todoContext.TodoList
                 .Include(a => a.InsertEmployee)
@@ -60,50 +61,67 @@ namespace WebAPI.Controllers
                 result = result.Where(a => a.Orders >= value.minOrder && a.Orders <= value.maxOrder);
             }
 
+            if (result == null || result.Count() <=0)
+            {
+                return NotFound("找不到資源");
+            }
+
             // 將DTO轉換部份函式化
-            return result.ToList().Select(a => ItemToDto(a));
+            //return result.ToList().Select(a => ItemToDto(a));
+            return Ok(result.ToList().Select(a => ItemToDto(a)));
         }
 
         // GET api/Todo/1f3012b6-71ae-4e74-88fd-018ed53ed2d3
         //https://localhost:7232/api/todo/450e22de-f9c1-44e2-948b-2f8f734118cb
         [HttpGet("{id}")]
-        public TodoListDto Get(Guid id)
+        //public TodoListDto Get(Guid id)
+        public ActionResult<TodoListDto> Get(Guid id)
         {
             // 沒有做關聯的寫法
-            var result = (from a in _todoContext.TodoList
-                          where a.TodoId == id
-                          select new TodoListDto
-                          {
-                              Enable = a.Enable,
-                              InsertTime = a.InsertTime,
-                              Name = a.Name,
-                              Orders = a.Orders,
-                              TodoId = a.TodoId,
-                              UpdateTime = a.UpdateTime,
-                              InsertEmployeeName = a.InsertEmployee.Name,
-                              UpdateEmployeeName = a.UpdateEmployee.Name,
-                              UploadFiles = (from b in _todoContext.UploadFile
-                                            where a.TodoId == b.TodoId
-                                            select new UploadFileDto
-                                            {
-                                                Name = b.Name,
-                                                Src = b.Src,
-                                                TodoId = b.TodoId,
-                                                UploadFileId = b.UploadFileId
-                                            }).ToList()
-                                }
-                            ).SingleOrDefault();
-              return result;
-            
-            // 有做關聯的寫法
             //var result = (from a in _todoContext.TodoList
             //              where a.TodoId == id
-            //              select a)
-            //              .Include(a => a.InsertEmployee)
-            //              .Include(a => a.UpdateEmployee)
-            //              .Include(a => a.UploadFiles)
-            //              .SingleOrDefault();
-            //return ItemToDto(result); // 函式化
+            //              select new TodoListDto
+            //              {
+            //                  Enable = a.Enable,
+            //                  InsertTime = a.InsertTime,
+            //                  Name = a.Name,
+            //                  Orders = a.Orders,
+            //                  TodoId = a.TodoId,
+            //                  UpdateTime = a.UpdateTime,
+            //                  InsertEmployeeName = a.InsertEmployee.Name,
+            //                  UpdateEmployeeName = a.UpdateEmployee.Name,
+            //                  UploadFiles = (from b in _todoContext.UploadFile
+            //                                 where a.TodoId == b.TodoId
+            //                                 select new UploadFileDto
+            //                                 {
+            //                                     Name = b.Name,
+            //                                     Src = b.Src,
+            //                                     TodoId = b.TodoId,
+            //                                     UploadFileId = b.UploadFileId
+            //                                 }).ToList()
+            //              }
+            //                ).SingleOrDefault();
+
+
+
+            // 有做關聯的寫法
+            var result = (from a in _todoContext.TodoList
+                          where a.TodoId == id
+                          select a)
+                          .Include(a => a.InsertEmployee)
+                          .Include(a => a.UpdateEmployee)
+                          .Include(a => a.UploadFiles)
+                          .SingleOrDefault();
+            if (result == null)
+            {
+                return NotFound("找不到Id:" +id+ "的資料");
+            }
+
+            //return Ok(ItemToDto(result)); // 函式化
+            return ItemToDto(result); // 函式化
+            //return Ok(result);
+
+
         }
 
         [HttpGet("AutoMapper")]
