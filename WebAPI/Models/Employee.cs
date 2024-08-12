@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace WebAPI.Models;
+
+public partial class Employee
+{
+    public Guid EmployeeId { get; set; }
+
+    public string Name { get; set; }
+
+    public string Account { get; set; }
+
+    public string Password { get; set; }
+
+    public virtual ICollection<TodoList> TodoListInsertEmployee { get; set; } = new List<TodoList>();
+
+    public virtual ICollection<TodoList> TodoListUpdateEmployee { get; set; } = new List<TodoList>();
+}

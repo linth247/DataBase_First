@@ -1,0 +1,55 @@
+https://www.youtube.com/watch?v=4LPXVT-Sm14&list=PLneJIGUTIItsqHp_8AbKWb7gyWDZ6pQyz&index=7
+
+mssql
+帳：sa
+密：sasa
+
+帳：Web
+密：123456
+
+
+那首先要使用Database First，需要先安裝以下二個套件：
+
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+
+Scaffold-DbContext "Server=127.0.0.1;Database=Web;User ID=Web;Password=123456;TrustServerCertificate=true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force
+
+--這個比較好
+Scaffold-DbContext "Server=127.0.0.1;Database=Web;User ID=Web;Password=123456;TrustServerCertificate=true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -NoOnConfiguring -UseDatabaseNames -NoPluralize -Force
+
+幾個參數解釋
+
+TrustServerCertificate=true：信任伺服器憑證
+
+-OutputDir Models：將檔案輸出到Models資料夾
+
+-NoOnConfiguring：DbContext不要產生OnConfiguring片段，影片會大概解釋是什麼
+
+-UseDatabaseNames：使用跟資料庫一樣的大小寫命名，不然可能大小寫會被改成別的風格
+
+-NoPluralize：不要加複數s，不然會幫你在命名結尾上加上s
+
+
+--appsettings.Development.json 加上以下
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "WebDatabase": "Server=127.0.0.1;Database=Web;User ID=Web;Password=123456;TrustServerCertificate=true"
+  }
+}
+
+
+--在Program.cs加上以下
+builder.Services.AddDbContext<WebContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("WebDatabase")));
+
+
+
+

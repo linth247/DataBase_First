@@ -1,0 +1,20 @@
+﻿namespace WebAPI.Dtos
+{
+    public class NewsDto
+    {
+        public Guid NewsId { get; set; }
+
+        public string Title { get; set; }
+
+        public string Content { get; set; }
+
+        public DateTime StartDateTime { get; set; }
+
+        public DateTime EndDateTime { get; set; }
+
+        public int Click { get; set; }
+        public int? Orders { get; set; }
+
+        //public ICollection<UploadFileDto> UploadFiles { get; set; };
+    }
+}
