@@ -231,9 +231,21 @@ namespace WebAPI.Controllers
 
         // POST api/<TodoController>
         [HttpPost]
-        public string Post([FromBody] string value)
+        public void Post([FromBody] TodoList value)
         {
-            return "value";
+            TodoList insert = new TodoList
+            {
+                Name = value.Name,
+                Enable = value.Enable,
+                Orders = value.Orders,
+                InsertTime = DateTime.Now,
+                UpdateTime = DateTime.Now,
+                InsertEmployeeId = Guid.Parse("8840a700-35a4-4301-93aa-f172a28a7583"),
+                UpdateEmployeeId = Guid.Parse("63F8FD9D-E045-4C78-A491-96EABE1D2024"),
+            };
+
+            _todoContext.TodoList.Add(insert);
+            _todoContext.SaveChanges();
         }
 
         // PUT api/<TodoController>/5
