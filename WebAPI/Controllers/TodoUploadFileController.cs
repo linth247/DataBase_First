@@ -99,6 +99,24 @@ namespace WebAPI.Controllers
             return "ok";
         }
 
+        //-----------autoMapper 新增一筆uploadfile
+        [HttpPost("AutoMapper")]
+        public string PostAutoMapper(Guid TodoId, [FromBody] UploadFilePostDto value)
+        {
+            if (!_todoContext.TodoList.Any(a => a.TodoId == TodoId))
+            {
+                return "找不到該事項";
+            }
+
+            var map = _mapper.Map<UploadFile>(value);
+            map.TodoId = TodoId;
+
+            _todoContext.UploadFile.Add(map);
+            _todoContext.SaveChanges();
+
+            return "ok";
+        }
+
         // PUT api/<TodoUploadFileController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)

@@ -9,6 +9,7 @@ namespace WebAPI.Profiles
         public UploadFileProfile()
         {
             CreateMap<UploadFile, UploadFileDto>();
+            CreateMap<UploadFilePostDto, UploadFile>();
         }
     }
 }
