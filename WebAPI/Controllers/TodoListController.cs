@@ -379,14 +379,16 @@ namespace WebAPI.Controllers
                           select a).SingleOrDefault();
             if(update != null)
             {
-                update.InsertTime = DateTime.Now;
                 update.UpdateTime = DateTime.Now;
-                update.InsertEmployeeId = Guid.Parse("8840a700-35a4-4301-93aa-f172a28a7583");
                 update.UpdateEmployeeId = Guid.Parse("63F8FD9D-E045-4C78-A491-96EABE1D2024");
 
-                update.Name = value.Name;
-                update.Orders = value.Orders;
-                update.Enable = value.Enable;
+                //update.Name = value.Name;
+                //update.Orders = value.Orders;
+                //update.Enable = value.Enable;
+
+                //38.【6.更新資料PUT與PATCH】ASP.NET Core Web API 入門教學(6_4) - 使用內建函式匹配更新資料	
+                //不用autoMapper
+                _todoContext.TodoList.Update(update).CurrentValues.SetValues(value);
 
                 _todoContext.SaveChanges();
             }
@@ -406,10 +408,8 @@ namespace WebAPI.Controllers
                           select a).SingleOrDefault();
             if (update != null)
             {
-                update.InsertTime = DateTime.Now;
                 update.UpdateTime = DateTime.Now;
-                update.InsertEmployeeId = Guid.Parse("8840a700-35a4-4301-93aa-f172a28a7583");
-                update.UpdateEmployeeId = Guid.Parse("63F8FD9D-E045-4C78-A491-96EABE1D2024");
+                 update.UpdateEmployeeId = Guid.Parse("63F8FD9D-E045-4C78-A491-96EABE1D2024");
 
                 update.Name = value.Name;
                 update.Orders = value.Orders;
@@ -446,6 +446,10 @@ namespace WebAPI.Controllers
                 _todoContext.SaveChanges();
             }
         }
+
+        //38.【6.更新資料PUT與PATCH】ASP.NET Core Web API 入門教學(6_4) - 使用內建函式匹配更新資料	
+        //不用autoMapper
+
 
         // DELETE api/<TodoController>/5
         [HttpDelete("{id}")]
