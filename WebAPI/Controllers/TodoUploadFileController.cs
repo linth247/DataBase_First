@@ -79,7 +79,7 @@ namespace WebAPI.Controllers
 
         // POST api/<TodoUploadFileController>
         [HttpPost]
-        public string Post(Guid TodoId, [FromBody] UploadFile value)
+        public string Post(Guid TodoId, [FromBody] UploadFilePostDto value)
         {
             if (!_todoContext.TodoList.Any(a => a.TodoId == TodoId))
             {

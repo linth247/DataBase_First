@@ -231,8 +231,19 @@ namespace WebAPI.Controllers
 
         // POST api/<TodoController>
         [HttpPost]
-        public void Post([FromBody] TodoList value)
+        public void Post([FromBody] TodoListPostDto value)
         {
+            List<UploadFile> up1 = new List<UploadFile>();
+            foreach (var temp in value.UploadFiles)
+            {
+                UploadFile up = new UploadFile
+                {
+                    Name = temp.Name,
+                    Src = temp.Src
+                };
+                up1.Add(up);
+            }
+
             TodoList insert = new TodoList
             {
                 Name = value.Name,
@@ -242,7 +253,8 @@ namespace WebAPI.Controllers
                 UpdateTime = DateTime.Now,
                 InsertEmployeeId = Guid.Parse("8840a700-35a4-4301-93aa-f172a28a7583"),
                 UpdateEmployeeId = Guid.Parse("63F8FD9D-E045-4C78-A491-96EABE1D2024"),
-                UploadFiles = value.UploadFiles // 同時加上子資料
+                //UploadFiles = value.UploadFiles // 同時加上子資料
+                UploadFiles = up1 // 同時加上子資料
             };
 
             _todoContext.TodoList.Add(insert);
@@ -251,7 +263,7 @@ namespace WebAPI.Controllers
 
         // POST api/<TodoController>
         [HttpPost("nofk")]
-        public void Postnofk([FromBody] TodoList value)
+        public void Postnofk([FromBody] TodoListPostDto value)
         {
             //新增父親後
             TodoList insert = new TodoList
