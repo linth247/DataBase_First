@@ -249,6 +249,41 @@ namespace WebAPI.Controllers
             _todoContext.SaveChanges();
         }
 
+        // POST api/<TodoController>
+        [HttpPost("nofk")]
+        public void Postnofk([FromBody] TodoList value)
+        {
+            //新增父親後
+            TodoList insert = new TodoList
+            {
+                Name = value.Name,
+                Enable = value.Enable,
+                Orders = value.Orders,
+                InsertTime = DateTime.Now,
+                UpdateTime = DateTime.Now,
+                InsertEmployeeId = Guid.Parse("8840a700-35a4-4301-93aa-f172a28a7583"),
+                UpdateEmployeeId = Guid.Parse("63F8FD9D-E045-4C78-A491-96EABE1D2024"),
+                //UploadFiles = value.UploadFiles // 同時加上子資料
+            };
+            _todoContext.TodoList.Add(insert);
+            _todoContext.SaveChanges(); // 要先insert動作
+
+            //再來新增兒子
+            foreach(var temp in value.UploadFiles)
+            {
+                UploadFile insert2 = new UploadFile
+                {
+                    Name = temp.Name,
+                    Src = temp.Src,
+                    TodoId = insert.TodoId // 拿到父親的TodoId
+                };
+                _todoContext.UploadFile.Add(insert2);
+            }
+
+            _todoContext.SaveChanges();
+
+        }
+
         // PUT api/<TodoController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
