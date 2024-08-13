@@ -9,6 +9,7 @@ using WebAPI.Dtos;
 using WebAPI.Parameters;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
+using Microsoft.Data.SqlClient;
 //using AutoMapper;
 
 
@@ -324,7 +325,33 @@ namespace WebAPI.Controllers
             _todoContext.SaveChanges();
         }
 
- 
+        //-----------使用SQL 新增
+        [HttpPost("postSQL")]
+        public void PostSQL([FromBody] TodoListPostDto value)
+        {
+            // 避免Sql injection
+            var name = new SqlParameter("name", value.Name);
+
+            string sql = @"INSERT INTO [dbo].[TodoList]
+           ([Name]
+           ,[InsertTime]
+           ,[UpdateTime]
+           ,[Enable]
+           ,[Orders]
+           ,[InsertEmployeeId]
+           ,[UpdateEmployeeId])
+     VALUES
+            (@name,'" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "','" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "','"+value.Enable+"','"+value.Orders+ "','8840a700-35a4-4301-93aa-f172a28a7583','63F8FD9D-E045-4C78-A491-96EABE1D2024')";
+            //(N'" + value.Name + "','" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "','" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "','"+value.Enable+"','"+value.Orders+ "','8840a700-35a4-4301-93aa-f172a28a7583','63F8FD9D-E045-4C78-A491-96EABE1D2024')";
+
+            _todoContext.Database.ExecuteSqlRaw(sql, name);
+        }
+
+
+
+
+
+
 
         // PUT api/<TodoController>/5
         [HttpPut("{id}")]
