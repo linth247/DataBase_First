@@ -327,7 +327,7 @@ namespace WebAPI.Controllers
         public void PostAutoMapper([FromBody] TodoListPostDto value)
         {
             var map = _mapper.Map<TodoList>(value); // 很多轉成一行
-            //手動給值
+            //手動給值, 轉換程式碼
             map.InsertTime = DateTime.Now;
             map.UpdateTime = DateTime.Now;
             map.InsertEmployeeId = Guid.Parse("8840a700-35a4-4301-93aa-f172a28a7583");
@@ -415,6 +415,34 @@ namespace WebAPI.Controllers
                 update.Orders = value.Orders;
                 update.Enable = value.Enable;
 
+                _todoContext.SaveChanges();
+            }
+        }
+
+        //37.【6.更新資料PUT與PATCH】ASP.NET Core Web API 入門教學(6_3) - 使用AutoMapper更新資料
+        [HttpPut("AutoMapper/{id}")]
+        public void PutAutoMapper(Guid id, [FromBody] TodoListPutDto value)
+        {
+            ////_todoContext.Entry(value).State = EntityState.Modified;
+            //_todoContext.TodoList.Update(value);
+            //_todoContext.SaveChanges();
+
+            //var update = _todoContext.TodoList.Find(id);
+            var update = (from a in _todoContext.TodoList
+                          where a.TodoId == id
+                          select a).SingleOrDefault();
+            if (update != null)
+            {
+                //update.InsertTime = DateTime.Now;
+                //update.UpdateTime = DateTime.Now;
+                //update.InsertEmployeeId = Guid.Parse("8840a700-35a4-4301-93aa-f172a28a7583");
+                //update.UpdateEmployeeId = Guid.Parse("63F8FD9D-E045-4C78-A491-96EABE1D2024");
+
+                //update.Name = value.Name;
+                //update.Orders = value.Orders;
+                //update.Enable = value.Enable;
+                _mapper.Map(value, update); // 記得要去做對應檔的設定 TodoListProfile.cs
+                // CreateMap<TodoListPutDto, TodoList>();
                 _todoContext.SaveChanges();
             }
         }
