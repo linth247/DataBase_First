@@ -466,11 +466,44 @@ namespace WebAPI.Controllers
         //不用autoMapper
 
 
+        //41.【7.刪除資料DELETE】ASP.NET Core Web API 入門教學(7_1) - 使用DELETE刪除資料
         // DELETE api/<TodoController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete(Guid id)
         {
+            var delete = (from a in _todoContext.TodoList
+                          where a.TodoId == id
+                          select a).Include(c=>c.UploadFiles).SingleOrDefault();
+
+            if(delete != null)
+            {
+                _todoContext.TodoList.Remove(delete);
+                _todoContext.SaveChanges();
+            }
         }
+
+        //42.【7.刪除資料DELETE】ASP.NET Core Web API 入門教學(7_2) - 刪除全部子資料
+        [HttpDelete("nofk/{id}")]
+        public void NofkDelete(Guid id)
+        {
+            // 有設外鍵，先刪除兒子
+            var child = from a in _todoContext.UploadFile
+                        where a.TodoId == id
+                        select a;
+
+            _todoContext.UploadFile.RemoveRange(child);
+            _todoContext.SaveChanges();
+
+            var delete = (from a in _todoContext.TodoList
+                          where a.TodoId == id
+                          select a).SingleOrDefault();
+            if (delete != null)
+            {
+                _todoContext.TodoList.Remove(delete);
+                _todoContext.SaveChanges();
+            }
+        }
+
 
         private static TodoListDto ItemToDto(TodoList a)
         {
