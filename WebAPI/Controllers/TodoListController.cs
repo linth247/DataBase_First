@@ -367,8 +367,31 @@ namespace WebAPI.Controllers
 
         // PUT api/<TodoController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(Guid id, [FromBody] TodoList value)
         {
+            ////_todoContext.Entry(value).State = EntityState.Modified;
+            //_todoContext.TodoList.Update(value);
+            //_todoContext.SaveChanges();
+
+            //var update = _todoContext.TodoList.Find(id);
+            var update = (from a in _todoContext.TodoList 
+                          where a.TodoId == id
+                          select a).SingleOrDefault();
+            if(update != null)
+            {
+                update.InsertTime = DateTime.Now;
+                update.UpdateTime = DateTime.Now;
+                update.InsertEmployeeId = Guid.Parse("8840a700-35a4-4301-93aa-f172a28a7583");
+                update.UpdateEmployeeId = Guid.Parse("63F8FD9D-E045-4C78-A491-96EABE1D2024");
+
+                update.Name = value.Name;
+                update.Orders = value.Orders;
+                update.Enable = value.Enable;
+
+                _todoContext.SaveChanges();
+            }
+
+
         }
 
         // DELETE api/<TodoController>/5
