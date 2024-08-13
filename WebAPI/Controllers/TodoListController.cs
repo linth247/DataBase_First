@@ -469,18 +469,22 @@ namespace WebAPI.Controllers
 
         //41.【7.刪除資料DELETE】ASP.NET Core Web API 入門教學(7_1) - 使用DELETE刪除資料
         // DELETE api/<TodoController>/5
+        //44.【7.刪除資料DELETE】ASP.NET Core Web API 入門教學(7_4) - 刪除資料後返回符合規範的內容
         [HttpDelete("{id}")]
-        public void Delete(Guid id)
+        public IActionResult Delete(Guid id)
         {
             var delete = (from a in _todoContext.TodoList
                           where a.TodoId == id
                           select a).Include(c=>c.UploadFiles).SingleOrDefault();
 
-            if(delete != null)
+            if(delete == null)
             {
-                _todoContext.TodoList.Remove(delete);
-                _todoContext.SaveChanges();
+                return NotFound("找不到刪除的資源");
             }
+            _todoContext.TodoList.Remove(delete);
+            _todoContext.SaveChanges();
+
+            return NoContent();
         }
 
         //42.【7.刪除資料DELETE】ASP.NET Core Web API 入門教學(7_2) - 刪除全部子資料
