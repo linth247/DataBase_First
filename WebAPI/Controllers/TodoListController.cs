@@ -10,6 +10,7 @@ using WebAPI.Parameters;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using Microsoft.Data.SqlClient;
+using System.Text.Json;
 //using AutoMapper;
 
 
@@ -502,6 +503,25 @@ namespace WebAPI.Controllers
                 _todoContext.TodoList.Remove(delete);
                 _todoContext.SaveChanges();
             }
+        }
+
+        //43.【7.刪除資料DELETE】ASP.NET Core Web API 入門教學(7_3) - 刪除多筆指定資料
+        // 如何測試：先去新增父子資料 AutoMapper ，新增兩筆資料，再把以下貼上
+        // https://localhost:7232/api/todo/list/["C21AA812-4B2D-4AB2-9A40-59ED6E9D07E1","8B7077C6-5495-4123-833E-6CF490E5DD6B"]
+
+        [HttpDelete("list/{ids}")]
+        // public void Delete(List<Guid> id)
+        public void Delete(string ids)
+        {
+            //["C21AA812-4B2D-4AB2-9A40-59ED6E9D07E1","8B7077C6-5495-4123-833E-6CF490E5DD6B"]
+            List<Guid> deleteList = JsonSerializer.Deserialize<List<Guid>>(ids);
+
+            var delete = (from a in _todoContext.TodoList
+                          where deleteList.Contains(a.TodoId)
+                          select a).Include(c => c.UploadFiles);
+
+            _todoContext.TodoList.RemoveRange(delete);
+            _todoContext.SaveChanges();
         }
 
 

@@ -46,8 +46,7 @@
               "RelativeToolTip": "WebAPI\\Models\\WebContext.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAIwHkAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T14:48:22.561Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T14:48:22.561Z"
             },
             {
               "$type": "Document",
@@ -83,8 +82,7 @@
               "RelativeToolTip": "WebAPI\\Dtos\\TodoListPostDto.cs",
               "ViewState": "AQIAAB0AAAAAAAAAAADwvyEAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T11:40:31.92Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-13T11:40:31.92Z"
             },
             {
               "$type": "Document",
@@ -94,7 +92,7 @@
               "RelativeDocumentMoniker": "WebAPI\\Controllers\\TodoListController.cs",
               "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\TodoListController.cs",
               "RelativeToolTip": "WebAPI\\Controllers\\TodoListController.cs",
-              "ViewState": "AQIAAOQBAAAAAAAAAAAwwOQBAABDAAAA",
+              "ViewState": "AQIAAPIBAAAAAAAAAADwv/oBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-11T03:52:06.864Z",
               "EditorCaption": ""
