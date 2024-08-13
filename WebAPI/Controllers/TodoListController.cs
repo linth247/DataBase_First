@@ -234,6 +234,12 @@ namespace WebAPI.Controllers
         [HttpPost]
         public void Post([FromBody] TodoListPostDto value)
         {
+            //if (!ModelState.IsValid)
+            //{
+            //    //return "no";
+            //    return Json($"Phone {phone} has an invalid format. Format: ###-###-####");  
+            //}
+
             // 人工對應
             //List<UploadFile> up1 = new List<UploadFile>();
             //foreach (var temp in value.UploadFiles)
