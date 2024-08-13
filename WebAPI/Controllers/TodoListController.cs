@@ -366,9 +366,15 @@ namespace WebAPI.Controllers
 
         //35.【6.更新資料PUT與PATCH】ASP.NET Core Web API 入門教學(6_1) - 使用PUT更新資料
         // PUT api/<TodoController>/5
+        //40.【6.更新資料PUT與PATCH】ASP.NET Core Web API 入門教學(6_6) - 更新資料後返回符合規範的內容
+        //回傳 IActionResult
         [HttpPut("{id}")]
-        public void Put(Guid id, [FromBody] TodoListPutDto value)
+        public IActionResult Put(Guid id, [FromBody] TodoListPutDto value)
         {
+            if(id != value.TodoId)
+            {
+                return BadRequest();
+            }
             ////_todoContext.Entry(value).State = EntityState.Modified;
             //_todoContext.TodoList.Update(value);
             //_todoContext.SaveChanges();
@@ -392,6 +398,15 @@ namespace WebAPI.Controllers
 
                 _todoContext.SaveChanges();
             }
+            else
+            {
+                return NotFound();
+            }
+
+            return NoContent(); // 204 伺服器成功的處理了請求，沒有返回任何內容。
+            // return NotFound();
+            // return NoContent();  //204
+            // return Ok();  // 200
         }
 
         //36.【6.更新資料PUT與PATCH】ASP.NET Core Web API 入門教學(6_2) - 使用DTO更新資和架構思考
