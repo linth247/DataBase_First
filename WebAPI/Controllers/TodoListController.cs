@@ -74,9 +74,9 @@ namespace WebAPI.Controllers
 
         // GET api/Todo/1f3012b6-71ae-4e74-88fd-018ed53ed2d3
         //https://localhost:7232/api/todo/450e22de-f9c1-44e2-948b-2f8f734118cb
-        [HttpGet("{id}")]
+        [HttpGet("{TodoId}")]
         //public TodoListDto Get(Guid id)
-        public ActionResult<TodoListDto> Get(Guid id)
+        public ActionResult<TodoListDto> GetOne(Guid TodoId)
         {
             // 沒有做關聯的寫法
             //var result = (from a in _todoContext.TodoList
@@ -107,7 +107,7 @@ namespace WebAPI.Controllers
 
             // 有做關聯的寫法
             var result = (from a in _todoContext.TodoList
-                          where a.TodoId == id
+                          where a.TodoId == TodoId
                           select a)
                           .Include(a => a.InsertEmployee)
                           .Include(a => a.UpdateEmployee)
@@ -115,7 +115,7 @@ namespace WebAPI.Controllers
                           .SingleOrDefault();
             if (result == null)
             {
-                return NotFound("找不到Id:" +id+ "的資料");
+                return NotFound("找不到Id:" + TodoId + "的資料");
             }
 
             //return Ok(ItemToDto(result)); // 函式化
@@ -232,7 +232,7 @@ namespace WebAPI.Controllers
 
         // POST api/<TodoController>
         [HttpPost]
-        public void Post([FromBody] TodoListPostDto value)
+        public IActionResult Post([FromBody] TodoListPostDto value)
         {
             //if (!ModelState.IsValid)
             //{
@@ -268,17 +268,23 @@ namespace WebAPI.Controllers
             _todoContext.TodoList.Add(insert).CurrentValues.SetValues(value);
             _todoContext.SaveChanges();
 
-            foreach (var temp in value.UploadFiles)
+            if(value.UploadFiles != null)
             {
-                _todoContext.UploadFile.Add(new UploadFile()
+                foreach (var temp in value.UploadFiles)
                 {
-                    //Name = temp.Name,
-                    //Src = temp.Src,
-                    TodoId = insert.TodoId // 拿到父親的TodoId
-                }).CurrentValues.SetValues(temp);
-                //_todoContext.UploadFile.Add(temp);
+                    _todoContext.UploadFile.Add(new UploadFile()
+                    {
+                        //Name = temp.Name,
+                        //Src = temp.Src,
+                        TodoId = insert.TodoId // 拿到父親的TodoId
+                    }).CurrentValues.SetValues(temp);
+                    //_todoContext.UploadFile.Add(temp);
+                }
+                _todoContext.SaveChanges();
             }
-            _todoContext.SaveChanges();
+
+
+            return CreatedAtAction(nameof(GetOne), new { TodoId = insert.TodoId }, insert);
         }
 
         // POST api/<TodoController>

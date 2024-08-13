@@ -23,14 +23,14 @@ namespace WebAPI.Dtos
 
         //public Guid TodoId { get; set; }
         [Required]
-        [EmailAddress(ErrorMessage = "名字請輸入電子信箱")]
-        [StringLength(1)]
-        [RegularExpression("[a-z]")]
+        //[EmailAddress(ErrorMessage = "名字請輸入電子信箱")]
+        //[StringLength(1)]
+        //[RegularExpression("[a-z]")]
         public string Name { get; set; }
         //public DateTime InsertTime { get; set; }
         //public DateTime UpdateTime { get; set; }
         public bool Enable { get; set; }
-        [Range(2,3)]
+        [Range(2,9)]
         public int Orders { get; set; }
 
         //public Guid InsertEmployeeId { get; set; }

@@ -9,70 +9,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\dtos\\todolistpostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\dtos\\todolistpostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\controllers\\todouploadfilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\todouploadfilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\profiles\\uploadfileprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\profiles\\uploadfileprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\profiles\\todolistprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\profiles\\todolistprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\dtos\\uploadfilepostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\dtos\\uploadfilepostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\dtos\\uploadfiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\dtos\\uploadfiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\dtos\\todolistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\dtos\\todolistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\models\\webcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\webcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\models\\uploadfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\uploadfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\controllers\\todo1controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\todo1controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\models\\webcontextx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\webcontextx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\models\\webcontext2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\webcontext2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\controllers\\organcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\organcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\models\\todolist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\todolist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,23 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UploadFilePostDto.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Dtos\\UploadFilePostDto.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Dtos\\UploadFilePostDto.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Dtos\\UploadFilePostDto.cs",
-              "RelativeToolTip": "WebAPI\\Dtos\\UploadFilePostDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T03:21:43.516Z"
             },
             {
               "$type": "Document",
@@ -108,189 +32,10 @@
               "RelativeDocumentMoniker": "WebAPI\\Dtos\\TodoListPostDto.cs",
               "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Dtos\\TodoListPostDto.cs",
               "RelativeToolTip": "WebAPI\\Dtos\\TodoListPostDto.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAADwvxcAAAAqAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAADwvyMAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-13T03:20:17.94Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TodoUploadFileController.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\TodoUploadFileController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\TodoUploadFileController.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\TodoUploadFileController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\TodoUploadFileController.cs",
-              "ViewState": "AQIAAF8AAAAAAAAAAAAcwG4AAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T15:25:10.64Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "WebContextX.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Models\\WebContextX.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Models\\WebContextX.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Models\\WebContextX.cs",
-              "RelativeToolTip": "WebAPI\\Models\\WebContextX.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAAwAYAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T14:49:20.663Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "NewsController.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\NewsController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\NewsController.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\NewsController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\NewsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T14:42:26.936Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "WebContext2.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Models\\WebContext2.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Models\\WebContext2.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Models\\WebContext2.cs",
-              "RelativeToolTip": "WebAPI\\Models\\WebContext2.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T14:38:56.537Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Todo1Controller.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\Todo1Controller.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\Todo1Controller.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\Todo1Controller.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\Todo1Controller.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAxwEEAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T13:41:20.768Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "OrganController.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\OrganController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\OrganController.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\OrganController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\OrganController.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAIwCUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T09:46:24.142Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UploadFileProfile.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Profiles\\UploadFileProfile.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Profiles\\UploadFileProfile.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Profiles\\UploadFileProfile.cs",
-              "RelativeToolTip": "WebAPI\\Profiles\\UploadFileProfile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T09:32:04.287Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UploadFileDto.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Dtos\\UploadFileDto.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Dtos\\UploadFileDto.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Dtos\\UploadFileDto.cs",
-              "RelativeToolTip": "WebAPI\\Dtos\\UploadFileDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T09:19:46.843Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UploadFile.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Models\\UploadFile.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Models\\UploadFile.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Models\\UploadFile.cs",
-              "RelativeToolTip": "WebAPI\\Models\\UploadFile.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAUAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T09:19:16.614Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TodoListProfile.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Profiles\\TodoListProfile.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Profiles\\TodoListProfile.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Profiles\\TodoListProfile.cs",
-              "RelativeToolTip": "WebAPI\\Profiles\\TodoListProfile.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAmwA4AAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T07:30:51.052Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Program.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Program.cs",
-              "RelativeToolTip": "WebAPI\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T07:27:50.271Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "WebContext.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Models\\WebContext.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Models\\WebContext.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Models\\WebContext.cs",
-              "RelativeToolTip": "WebAPI\\Models\\WebContext.cs",
-              "ViewState": "AQIAAGkAAAAAAAAAAAAiwHEAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T06:55:12.276Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "TodoList.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Models\\TodoList.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Models\\TodoList.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Models\\TodoList.cs",
-              "RelativeToolTip": "WebAPI\\Models\\TodoList.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAA1wBwAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T06:40:40.86Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Employee.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Models\\Employee.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Models\\Employee.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Models\\Employee.cs",
-              "RelativeToolTip": "WebAPI\\Models\\Employee.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAwwAcAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T06:38:12.144Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TodoListDto.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Dtos\\TodoListDto.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Dtos\\TodoListDto.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Dtos\\TodoListDto.cs",
-              "RelativeToolTip": "WebAPI\\Dtos\\TodoListDto.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAA1wA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T06:36:24.615Z"
+              "WhenOpened": "2024-08-13T11:40:31.92Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -300,7 +45,7 @@
               "RelativeDocumentMoniker": "WebAPI\\Controllers\\TodoListController.cs",
               "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\TodoListController.cs",
               "RelativeToolTip": "WebAPI\\Controllers\\TodoListController.cs",
-              "ViewState": "AQIAAN8AAAAAAAAAAAAswOMAAAAcAAAA",
+              "ViewState": "AQIAAAYBAAAAAAAAAAAgwB8BAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-11T03:52:06.864Z",
               "EditorCaption": ""
