@@ -64,11 +64,12 @@ namespace WebAPI.Services
               .Include(a => a.UpdateEmployee)
               .Include(a => a.UploadFiles)
               .SingleOrDefault();
-            //if (result == null)
-            //{
-            //    return (TodoListDto)result;
-            //}
-            return ItemToDto(result);
+
+            if (result != null)
+            {
+                return ItemToDto(result);
+            }
+            return null;
         }
 
         public IEnumerable<TodoListDto> 使用AutoMapper取得資料(TodoSelectParameter value)
