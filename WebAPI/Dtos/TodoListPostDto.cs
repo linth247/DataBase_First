@@ -6,6 +6,8 @@ namespace WebAPI.Dtos
 {
     //33.【5.新增資料POST】ASP.NET Core Web API 入門教學(5_8) - 資料驗證
     //https://learn.microsoft.com/zh-tw/aspnet/core/mvc/models/validation?view=aspnetcore-8.0
+    [StartEnd]
+    [Test(Tvalue = "321")]
     public class TodoListPostDto
     {
         // 驗證錯誤訊息
@@ -34,6 +36,9 @@ namespace WebAPI.Dtos
         public bool Enable { get; set; }
         [Range(2,9)]
         public int Orders { get; set; }
+
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
 
         //public Guid InsertEmployeeId { get; set; }
         //public Guid UpdateEmployeeId { get; set; }
