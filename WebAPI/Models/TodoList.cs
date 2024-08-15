@@ -21,6 +21,8 @@ public partial class TodoList
     public bool Enable { get; set; }
 
     public int Orders { get; set; }
+    public DateTime? StartTime { get; set; }
+    public DateTime? EndTime { get; set; }
 
     public Guid? InsertEmployeeId { get; set; }
 
