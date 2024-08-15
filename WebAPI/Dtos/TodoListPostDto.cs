@@ -1,5 +1,6 @@
 ﻿using WebAPI.Models;
 using System.ComponentModel.DataAnnotations;
+using WebAPI.ValidationAttributes;
 
 namespace WebAPI.Dtos
 {
@@ -23,6 +24,7 @@ namespace WebAPI.Dtos
 
         //public Guid TodoId { get; set; }
         [Required]
+        [TodoName]
         //[EmailAddress(ErrorMessage = "名字請輸入電子信箱")]
         //[StringLength(1)]
         //[RegularExpression("[a-z]")]

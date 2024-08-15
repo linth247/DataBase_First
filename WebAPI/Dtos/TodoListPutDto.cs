@@ -1,5 +1,6 @@
 ﻿using WebAPI.Models;
 using System.ComponentModel.DataAnnotations;
+using WebAPI.ValidationAttributes;
 
 namespace WebAPI.Dtos
 {
@@ -9,6 +10,7 @@ namespace WebAPI.Dtos
     {
         //36.【6.更新資料PUT與PATCH】ASP.NET Core Web API 入門教學(6_2) - 使用DTO更新資和架構思考
         public Guid TodoId { get; set; }
+        [TodoName]
         public string Name { get; set; }
 
         public bool Enable { get; set; }
