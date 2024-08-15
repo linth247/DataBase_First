@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using Microsoft.Data.SqlClient;
 using System.Text.Json;
+using WebAPI.Services;
 //using AutoMapper;
 
 
@@ -23,13 +24,18 @@ namespace WebAPI.Controllers
     public class TodoController : ControllerBase
     {
         private readonly WebContext _todoContext;
+        private readonly TodoListService _todoListService;
         private readonly IMapper _mapper;
 
-        public TodoController(WebContext todoContext, IMapper mapper)
+        public TodoController(
+            WebContext todoContext, 
+            IMapper mapper,
+            TodoListService todoListService)
         //public TodoController(WebContext todoContext)
         {
             _todoContext = todoContext;
             _mapper = mapper;
+            _todoListService = todoListService;
         }
 
         // GET: api/<TodoController>
@@ -37,40 +43,52 @@ namespace WebAPI.Controllers
         //public IEnumerable<TodoListDto> Get([FromQuery] TodoSelectParameter value)
         public IActionResult Get([FromQuery] TodoSelectParameter value)
         {
-            var result = _todoContext.TodoList
-                .Include(a => a.InsertEmployee)
-                .Include(a => a.UpdateEmployee)
-                .Include(a => a.UploadFiles)
-                .Select(a => a);
+            // 控制邏輯，控制資料流向
+            var result = _todoListService.取得資料(value);
 
-            if (!string.IsNullOrWhiteSpace(value.name))
-            {
-                result = result.Where(a => a.Name.IndexOf(value.name) > -1);
-            }
-
-            if (value.enable != null)
-            {
-                result = result.Where(a => a.Enable == value.enable);
-            }
-
-            if (value.InsertTime != null)
-            {
-                result = result.Where(a => a.InsertTime.Date == value.InsertTime);
-            }
-
-            if (value.minOrder != null && value.maxOrder != null)
-            {
-                result = result.Where(a => a.Orders >= value.minOrder && a.Orders <= value.maxOrder);
-            }
-
-            if (result == null || result.Count() <=0)
+            // 控制有沒有資料
+            if (result == null || result.Count() <= 0)
             {
                 return NotFound("找不到資源");
             }
 
-            // 將DTO轉換部份函式化
-            //return result.ToList().Select(a => ItemToDto(a));
-            return Ok(result.ToList().Select(a => ItemToDto(a)));
+            return Ok(result);
+
+
+            //var result = _todoContext.TodoList
+            //    .Include(a => a.InsertEmployee)
+            //    .Include(a => a.UpdateEmployee)
+            //    .Include(a => a.UploadFiles)
+            //    .Select(a => a);
+
+            //if (!string.IsNullOrWhiteSpace(value.name))
+            //{
+            //    result = result.Where(a => a.Name.IndexOf(value.name) > -1);
+            //}
+
+            //if (value.enable != null)
+            //{
+            //    result = result.Where(a => a.Enable == value.enable);
+            //}
+
+            //if (value.InsertTime != null)
+            //{
+            //    result = result.Where(a => a.InsertTime.Date == value.InsertTime);
+            //}
+
+            //if (value.minOrder != null && value.maxOrder != null)
+            //{
+            //    result = result.Where(a => a.Orders >= value.minOrder && a.Orders <= value.maxOrder);
+            //}
+
+            //if (result == null || result.Count() <=0)
+            //{
+            //    return NotFound("找不到資源");
+            //}
+
+            //// 將DTO轉換部份函式化
+            ////return result.ToList().Select(a => ItemToDto(a));
+            //return Ok(result.ToList().Select(a => ItemToDto(a)));
         }
 
         // GET api/Todo/1f3012b6-71ae-4e74-88fd-018ed53ed2d3
@@ -107,20 +125,23 @@ namespace WebAPI.Controllers
 
 
             // 有做關聯的寫法
-            var result = (from a in _todoContext.TodoList
-                          where a.TodoId == TodoId
-                          select a)
-                          .Include(a => a.InsertEmployee)
-                          .Include(a => a.UpdateEmployee)
-                          .Include(a => a.UploadFiles)
-                          .SingleOrDefault();
+            //var result = (from a in _todoContext.TodoList
+            //              where a.TodoId == TodoId
+            //              select a)
+            //              .Include(a => a.InsertEmployee)
+            //              .Include(a => a.UpdateEmployee)
+            //              .Include(a => a.UploadFiles)
+            //              .SingleOrDefault();
+
+            var result = _todoListService.取得單筆資料(TodoId);
             if (result == null)
             {
                 return NotFound("找不到Id:" + TodoId + "的資料");
             }
 
             //return Ok(ItemToDto(result)); // 函式化
-            return ItemToDto(result); // 函式化
+            //return ItemToDto(result); // 函式化
+            return result;
             //return Ok(result);
 
 
@@ -129,36 +150,36 @@ namespace WebAPI.Controllers
         [HttpGet("AutoMapper")]
         public IEnumerable<TodoListDto> GetAutoMapper([FromQuery] TodoSelectParameter value)
         {
-            var result = _todoContext.TodoList
-                .Include(a => a.InsertEmployee)
-                .Include(a => a.UpdateEmployee)
-                .Include(a => a.UploadFiles)
-                .Select(a => a);
+            //var result = _todoContext.TodoList
+            //    .Include(a => a.InsertEmployee)
+            //    .Include(a => a.UpdateEmployee)
+            //    .Include(a => a.UploadFiles)
+            //    .Select(a => a);
 
-            if (!string.IsNullOrWhiteSpace(value.name))
-            {
-                result = result.Where(a => a.Name.IndexOf(value.name) > -1);
-            }
+            //if (!string.IsNullOrWhiteSpace(value.name))
+            //{
+            //    result = result.Where(a => a.Name.IndexOf(value.name) > -1);
+            //}
 
-            if (value.enable != null)
-            {
-                result = result.Where(a => a.Enable == value.enable);
-            }
+            //if (value.enable != null)
+            //{
+            //    result = result.Where(a => a.Enable == value.enable);
+            //}
 
-            if (value.InsertTime != null)
-            {
-                result = result.Where(a => a.InsertTime.Date == value.InsertTime);
-            }
+            //if (value.InsertTime != null)
+            //{
+            //    result = result.Where(a => a.InsertTime.Date == value.InsertTime);
+            //}
 
-            if (value.minOrder != null && value.maxOrder != null)
-            {
-                result = result.Where(a => a.Orders >= value.minOrder && a.Orders <= value.maxOrder);
-            }
+            //if (value.minOrder != null && value.maxOrder != null)
+            //{
+            //    result = result.Where(a => a.Orders >= value.minOrder && a.Orders <= value.maxOrder);
+            //}
 
-            var map = _mapper.Map<IEnumerable<TodoListDto>>(result);
+            //var map = _mapper.Map<IEnumerable<TodoListDto>>(result);
 
-            return map;
-            //return null;
+            //return map;
+            return _todoListService.使用AutoMapper取得資料(value);
         }
 
         [HttpGet("AutoMapper/{id}")]

@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using WebAPI.Models;
 using WebAPI.Profiles;
+using WebAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,9 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("WebDatabase")));
 //builder.Services.AddAutoMapper(typeof(UserRoleReMapperConfig));
 builder.Services.AddAutoMapper(typeof(TodoListProfile));
 builder.Services.AddAutoMapper(typeof(UploadFileProfile));
+
+//
+builder.Services.AddScoped<TodoListService>();
 
 var app = builder.Build();
 
