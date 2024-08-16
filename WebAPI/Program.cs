@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using WebAPI.Interfaces;
 using WebAPI.Models;
 using WebAPI.Profiles;
 using WebAPI.Services;
@@ -27,6 +28,12 @@ builder.Services.AddSingleton<SingletonService>();
 builder.Services.AddScoped<ScopedService>();
 //程式運行期間，只會有一個實例
 builder.Services.AddTransient<TransientService>();
+
+//53.【9.使用DI依賴注入功能】ASP.NET Core Web API 入門教學(9_5) - DI_IoC用法
+//builder.Services.AddScoped<ITodoListService, TodoLinqService>();
+builder.Services.AddScoped<ITodoListService, TodoAutoMapperService>();
+
+
 
 var app = builder.Build();
 
