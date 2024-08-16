@@ -12,9 +12,9 @@ namespace WebAPI.Controllers
     [ApiController]
     public class TodoIOCController : ControllerBase
     {
-        private readonly ITodoListService _todoListService;
+        private readonly IEnumerable<ITodoListService> _todoListService;
 
-        public TodoIOCController(ITodoListService todoListService)
+        public TodoIOCController(IEnumerable<ITodoListService> todoListService)
         {
             _todoListService = todoListService;
         }
@@ -23,7 +23,17 @@ namespace WebAPI.Controllers
         [HttpGet]
         public List<TodoListDto> Get([FromQuery]TodoSelectParameter value)
         {
-            return _todoListService.取得資料(value);
+            ITodoListService _todo;
+            if (value.type == "fun")
+            {
+                _todo = _todoListService.Where(a => a.type == "function").Single();
+            }
+            else
+            {
+                _todo = _todoListService.Where(a => a.type == "automapper").Single();
+            }
+
+            return _todo.取得資料(value);
         }
 
     }

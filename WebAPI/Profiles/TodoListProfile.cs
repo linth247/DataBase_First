@@ -17,6 +17,10 @@ namespace WebAPI.Profiles
                 .ForMember(
                 dest => dest.UpdateEmployeeName,
                 opt => opt.MapFrom(src => src.UpdateEmployee.Name + "(" + src.UpdateEmployeeId + ")")
+                )
+                .ForMember(
+                dest => dest.Name,
+                opt => opt.MapFrom(src => src.Name + "(use automaper)")
                 );
 
             CreateMap<TodoListPostDto, TodoList>();

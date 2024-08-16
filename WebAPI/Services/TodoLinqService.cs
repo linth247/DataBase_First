@@ -11,6 +11,8 @@ namespace WebAPI.Services
     {
         private readonly WebContext _todoContext;
 
+        public string type => "function";
+
         public TodoLinqService(WebContext todoContext)
         {
             _todoContext = todoContext;
@@ -72,7 +74,7 @@ namespace WebAPI.Services
                 Enable = a.Enable,
                 InsertEmployeeName = a.InsertEmployee.Name + "(" + a.InsertEmployeeId + ")",
                 InsertTime = a.InsertTime,
-                Name = a.Name,
+                Name = a.Name+"(use function)",
                 Orders = a.Orders,
                 TodoId = a.TodoId,
                 UpdateEmployeeName = a.UpdateEmployee.Name + "(" + a.UpdateEmployeeId + ")",

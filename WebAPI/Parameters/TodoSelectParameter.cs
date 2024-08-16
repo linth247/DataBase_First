@@ -4,6 +4,7 @@ namespace WebAPI.Parameters
 {
     public class TodoSelectParameter
     {
+        public string type { get; set; }
         public string name { get; set; }
         public bool? enable { get; set; }
         public DateTime? InsertTime { get; set; }

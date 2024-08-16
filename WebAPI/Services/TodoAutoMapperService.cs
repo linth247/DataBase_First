@@ -9,6 +9,7 @@ namespace WebAPI.Services
 {
     public class TodoAutoMapperService : ITodoListService
     {
+        public string type => "automapper";
         private readonly WebContext _todoContext;
         private readonly IMapper _mapper;
 
