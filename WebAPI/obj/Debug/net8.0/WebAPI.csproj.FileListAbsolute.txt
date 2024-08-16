@@ -265,3 +265,4 @@ C:\codes\WebAPI\DataBase_First\WebAPI\obj\Debug\net8.0\WebAPI.pdb
 C:\codes\WebAPI\DataBase_First\WebAPI\obj\Debug\net8.0\WebAPI.genruntimeconfig.cache
 C:\codes\WebAPI\DataBase_First\WebAPI\obj\Debug\net8.0\ref\WebAPI.dll
 C:\codes\WebAPI\DataBase_First\WebAPI\obj\Debug\net8.0\WebAPI.sourcelink.json
+C:\codes\WebAPI\DataBase_First\WebAPI\bin\Debug\net8.0\WebAPI.staticwebassets.runtime.json
