@@ -405,25 +405,30 @@ namespace WebAPI.Controllers
             //_todoContext.SaveChanges();
 
             //var update = _todoContext.TodoList.Find(id);
-            var update = (from a in _todoContext.TodoList 
-                          where a.TodoId == id
-                          select a).SingleOrDefault();
-            if(update != null)
-            {
-                update.UpdateTime = DateTime.Now;
-                update.UpdateEmployeeId = Guid.Parse("63F8FD9D-E045-4C78-A491-96EABE1D2024");
+            //var update = (from a in _todoContext.TodoList 
+            //              where a.TodoId == id
+            //              select a).SingleOrDefault();
+            //if(update != null)
+            //{
+            //    update.UpdateTime = DateTime.Now;
+            //    update.UpdateEmployeeId = Guid.Parse("63F8FD9D-E045-4C78-A491-96EABE1D2024");
 
-                //update.Name = value.Name;
-                //update.Orders = value.Orders;
-                //update.Enable = value.Enable;
+            //    //update.Name = value.Name;
+            //    //update.Orders = value.Orders;
+            //    //update.Enable = value.Enable;
 
-                //38.【6.更新資料PUT與PATCH】ASP.NET Core Web API 入門教學(6_4) - 使用內建函式匹配更新資料	
-                //不用autoMapper
-                _todoContext.TodoList.Update(update).CurrentValues.SetValues(value);
+            //    //38.【6.更新資料PUT與PATCH】ASP.NET Core Web API 入門教學(6_4) - 使用內建函式匹配更新資料	
+            //    //不用autoMapper
+            //    _todoContext.TodoList.Update(update).CurrentValues.SetValues(value);
 
-                _todoContext.SaveChanges();
-            }
-            else
+            //    _todoContext.SaveChanges();
+            //}
+            //else
+            //{
+            //    return NotFound();
+            //}
+
+            if(_todoListService.修改資料(id, value) == 0)
             {
                 return NotFound();
             }
@@ -497,16 +502,21 @@ namespace WebAPI.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {
-            var delete = (from a in _todoContext.TodoList
-                          where a.TodoId == id
-                          select a).Include(c=>c.UploadFiles).SingleOrDefault();
+            //var delete = (from a in _todoContext.TodoList
+            //              where a.TodoId == id
+            //              select a).Include(c=>c.UploadFiles).SingleOrDefault();
 
-            if(delete == null)
+            //if(delete == null)
+            //{
+            //    return NotFound("找不到刪除的資源");
+            //}
+            //_todoContext.TodoList.Remove(delete);
+            //_todoContext.SaveChanges();
+
+            if(_todoListService.刪除資料(id) == 0)
             {
                 return NotFound("找不到刪除的資源");
             }
-            _todoContext.TodoList.Remove(delete);
-            _todoContext.SaveChanges();
 
             return NoContent();
         }

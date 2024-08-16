@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebAPI.Dtos;
 using WebAPI.Models;
@@ -121,6 +122,7 @@ namespace WebAPI.Services
             _todoContext.SaveChanges();
         }
 
+        //50.【9.使用DI依賴注入功能】ASP.NET Core Web API 入門教學(9_2) - 基本DI依賴注入用法_POST
         public IEnumerable<TodoListDto> 使用AutoMapper取得資料(TodoSelectParameter value)
         {
             var result = _todoContext.TodoList
@@ -153,6 +155,44 @@ namespace WebAPI.Services
             return _mapper.Map<IEnumerable<TodoListDto>>(result);
         }
 
+        //51.【9.使用DI依賴注入功能】ASP.NET Core Web API 入門教學(9_3) - 基本DI依賴注入用法_PUT、DELETE
+        public int 修改資料(Guid id, TodoListPutDto value)
+        {
+            var update = (from a in _todoContext.TodoList
+                          where a.TodoId == id
+                          select a).SingleOrDefault();
+            if (update != null)
+            {
+                update.UpdateTime = DateTime.Now;
+                update.UpdateEmployeeId = Guid.Parse("63F8FD9D-E045-4C78-A491-96EABE1D2024");
+
+                //update.Name = value.Name;
+                //update.Orders = value.Orders;
+                //update.Enable = value.Enable;
+
+                //38.【6.更新資料PUT與PATCH】ASP.NET Core Web API 入門教學(6_4) - 使用內建函式匹配更新資料	
+                //不用autoMapper
+                _todoContext.TodoList.Update(update).CurrentValues.SetValues(value);
+
+                
+            }
+            return _todoContext.SaveChanges(); // 有修改到資料，就回傳1，沒有修改，就回傳0
+        }
+
+
+        public int 刪除資料(Guid id)
+        {
+            var delete = (from a in _todoContext.TodoList
+                          where a.TodoId == id
+                          select a).Include(c => c.UploadFiles).SingleOrDefault();
+
+            if (delete != null)
+            {
+                _todoContext.TodoList.Remove(delete);
+            }
+            
+            return _todoContext.SaveChanges(); // 回傳改了幾筆
+        }
 
         private static TodoListDto ItemToDto(TodoList a)
         {
