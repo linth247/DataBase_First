@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Todo.Services;
 using WebAPI.Interfaces;
 using WebAPI.Models;
 using WebAPI.Profiles;
@@ -34,9 +35,10 @@ builder.Services.AddTransient<TransientService>();
 // 一個介面，兩種不同的實現方式
 // 注入實現多個服務，然後讓Controller那邊，控制選擇使用哪一個實作，取得資料
 // 例如：付款方式，就可以選擇使用哪種服務，哪種付款方式
+builder.Services.AddScoped<ITodoListRepository, TodoListRepository>();
 builder.Services.AddScoped<ITodoListService, TodoLinqService>();
 builder.Services.AddScoped<ITodoListService, TodoAutoMapperService>();
-
+builder.Services.AddScoped<ITodoListService, TodoListRService>();
 
 
 var app = builder.Build();
