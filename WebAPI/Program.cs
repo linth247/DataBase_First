@@ -20,6 +20,14 @@ builder.Services.AddAutoMapper(typeof(UploadFileProfile));
 //
 builder.Services.AddScoped<TodoListService>();
 
+builder.Services.AddScoped<TestDIService>();
+//每次注入時，都是一個新的實例
+builder.Services.AddSingleton<SingletonService>();
+//每個Request為同一個新的實例
+builder.Services.AddScoped<ScopedService>();
+//程式運行期間，只會有一個實例
+builder.Services.AddTransient<TransientService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
