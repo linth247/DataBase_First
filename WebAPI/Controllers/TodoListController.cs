@@ -26,16 +26,19 @@ namespace WebAPI.Controllers
         private readonly WebContext _todoContext;
         private readonly TodoListService _todoListService;
         private readonly IMapper _mapper;
+        private readonly IWebHostEnvironment _env;
 
         public TodoController(
             WebContext todoContext, 
             IMapper mapper,
-            TodoListService todoListService)
+            TodoListService todoListService,
+            IWebHostEnvironment env)
         //public TodoController(WebContext todoContext)
         {
             _todoContext = todoContext;
             _mapper = mapper;
             _todoListService = todoListService;
+            _env = env;
         }
 
         // GET: api/<TodoController>
@@ -309,6 +312,57 @@ namespace WebAPI.Controllers
             var insert = _todoListService.新增資料(value);
 
             return CreatedAtAction(nameof(GetOne), new { TodoId = insert.TodoId }, insert);
+        }
+
+        //58.【10.上傳檔案API】ASP.NET Core Web API 入門教學(10_3) - 使用ModelBinder處理FormData的Json字串並反序列化成對應類別物件
+        [HttpPost("up")]
+        //public void PostUp([FromForm] string value, [FromForm] IFormFileCollection files)
+        //{
+        //    TodoList aa = JsonSerializer.Deserialize<TodoList>(value);
+        //}
+        public void PostUp([FromForm] TodoListPostUpDto value)
+        {
+            // 新增一筆資料
+            TodoList insert = new TodoList
+            {
+                InsertTime = DateTime.Now,
+                UpdateTime = DateTime.Now,
+                InsertEmployeeId = Guid.Parse("8840a700-35a4-4301-93aa-f172a28a7583"),
+                UpdateEmployeeId = Guid.Parse("63F8FD9D-E045-4C78-A491-96EABE1D2024"),
+            };
+
+            _todoContext.TodoList.Add(insert).CurrentValues.SetValues(value.TodoList);
+            _todoContext.SaveChanges();
+
+            // 夾帶檔案
+            var rootPath = _env.ContentRootPath + @"\wwwroot\UploadFiles\" + insert.TodoId + "\\";
+
+            if (!Directory.Exists(rootPath))
+            {
+                Directory.CreateDirectory(rootPath);
+            }
+
+            foreach (var file in value.files)
+            {
+                if (file.Length > 0)
+                {
+                    var filePath = file.FileName;
+                    using (var stream = System.IO.File.Create(rootPath + filePath))
+                    {
+                        file.CopyTo(stream);
+
+                        var insert2 = new UploadFile
+                        {
+                            Name = filePath,
+                            Src = "/UploadFiles/" + insert.TodoId + "/" + filePath,
+                            TodoId = insert.TodoId
+                        };
+
+                        _todoContext.UploadFile.Add(insert2);
+                    }
+                }
+            }
+            _todoContext.SaveChanges();
         }
 
         // POST api/<TodoController>
