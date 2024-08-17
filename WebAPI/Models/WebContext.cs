@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using WebAPI.Dtos;
 
 namespace WebAPI.Models;
 
@@ -20,15 +19,14 @@ public partial class WebContext : DbContext
 
     public virtual DbSet<Organ> Organ { get; set; }
 
+    public virtual DbSet<Role> Role { get; set; }
+
     public virtual DbSet<TodoList> TodoList { get; set; }
-    //public virtual DbSet<TodoListDto> TodoListDto { get; set; }
 
     public virtual DbSet<UploadFile> UploadFile { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        //modelBuilder.Entity<TodoListDto>().HasNoKey();
-
         modelBuilder.Entity<Employee>(entity =>
         {
             entity.Property(e => e.EmployeeId).HasDefaultValueSql("(newid())");
@@ -87,15 +85,27 @@ public partial class WebContext : DbContext
                 .HasMaxLength(50);
         });
 
+        modelBuilder.Entity<Role>(entity =>
+        {
+            entity.HasNoKey();
+
+            entity.Property(e => e.Name)
+                .IsRequired()
+                .HasMaxLength(50);
+            entity.Property(e => e.RoleId).HasDefaultValueSql("(newid())");
+        });
+
         modelBuilder.Entity<TodoList>(entity =>
         {
             entity.HasKey(e => e.TodoId);
 
             entity.Property(e => e.TodoId).HasDefaultValueSql("(newid())");
+            entity.Property(e => e.EndTime).HasColumnType("datetime");
             entity.Property(e => e.InsertTime).HasColumnType("datetime");
             entity.Property(e => e.Name)
                 .IsRequired()
                 .HasMaxLength(20);
+            entity.Property(e => e.StartTime).HasColumnType("datetime");
             entity.Property(e => e.UpdateTime).HasColumnType("datetime");
 
             entity.HasOne(d => d.InsertEmployee).WithMany(p => p.TodoListInsertEmployee)
@@ -109,11 +119,10 @@ public partial class WebContext : DbContext
 
         modelBuilder.Entity<UploadFile>(entity =>
         {
+            entity.HasKey(e => e.UploadFileId).HasName("PK_UploadFile");
+
             entity.Property(e => e.UploadFileId).HasDefaultValueSql("(newid())");
             entity.Property(e => e.Name)
-                .IsRequired()
-                .HasMaxLength(50);
-            entity.Property(e => e.Src)
                 .IsRequired()
                 .HasMaxLength(50);
 

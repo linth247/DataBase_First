@@ -13,6 +13,10 @@ public partial class Employee
 
     public string Password { get; set; }
 
+    public Guid? JobTitleId { get; set; }
+
+    public Guid? DivisionId { get; set; }
+
     public virtual ICollection<TodoList> TodoListInsertEmployee { get; set; } = new List<TodoList>();
 
     public virtual ICollection<TodoList> TodoListUpdateEmployee { get; set; } = new List<TodoList>();

@@ -1,15 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using WebAPI.Dtos;
 
 namespace WebAPI.Models;
 
 public partial class TodoList
 {
-    public TodoList()
-    {
-        UploadFiles = new HashSet<UploadFile>();
-    }
     public Guid TodoId { get; set; }
 
     public string Name { get; set; }
@@ -21,16 +16,18 @@ public partial class TodoList
     public bool Enable { get; set; }
 
     public int Orders { get; set; }
-    public DateTime? StartTime { get; set; }
-    public DateTime? EndTime { get; set; }
 
     public Guid? InsertEmployeeId { get; set; }
 
     public Guid? UpdateEmployeeId { get; set; }
 
+    public DateTime? StartTime { get; set; }
+
+    public DateTime? EndTime { get; set; }
+
     public virtual Employee InsertEmployee { get; set; }
 
     public virtual Employee UpdateEmployee { get; set; }
 
-    public virtual ICollection<UploadFile> UploadFiles { get; set; }
+    public virtual ICollection<UploadFile> UploadFiles { get; set; } = new List<UploadFile>();
 }

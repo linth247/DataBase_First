@@ -99,6 +99,7 @@ namespace WebAPI.Controllers
         // GET api/Todo/1f3012b6-71ae-4e74-88fd-018ed53ed2d3
         //https://localhost:7232/api/todo/450e22de-f9c1-44e2-948b-2f8f734118cb
         [HttpGet("{TodoId}")]
+        [Authorize(Roles ="select")]
         //public TodoListDto Get(Guid id)
         public ActionResult<TodoListDto> GetOne(Guid TodoId)
         {
@@ -153,6 +154,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("AutoMapper")]
+        [Authorize(Roles = "automapper")]
         public IEnumerable<TodoListDto> GetAutoMapper([FromQuery] TodoSelectParameter value)
         {
             //var result = _todoContext.TodoList

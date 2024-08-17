@@ -19,6 +19,11 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         //options.LoginPath = "/Auth/Login";
         //options.LogoutPath = "/Auth/Logout";
         //options.AccessDeniedPath = "/Auth/AccessDenied";
+        //沒有權限時，會自動導到這個網址
+        options.AccessDeniedPath = new PathString("/api/Login/NoAccess");
+        // 全部的cooike都會受影響
+        //options.ExpireTimeSpan=TimeSpan.FromSeconds(5); // 登入多久會失效
+
     });
 
 // 全部的controller 的API, 都必須驗證才能使用
