@@ -10,28 +10,6 @@ using WebAPI.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-// 設定 Cookie 式登入驗證，指定登入登出 Action
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
-    {
-        //未登入時會自動導到這個網址
-        options.LoginPath = new PathString("/api/Login/NoLogin");
-        //options.LoginPath = "/Auth/Login";
-        //options.LogoutPath = "/Auth/Logout";
-        //options.AccessDeniedPath = "/Auth/AccessDenied";
-        //沒有權限時，會自動導到這個網址
-        options.AccessDeniedPath = new PathString("/api/Login/NoAccess");
-        // 全部的cooike都會受影響
-        //options.ExpireTimeSpan=TimeSpan.FromSeconds(5); // 登入多久會失效
-
-    });
-
-// 全部的controller 的API, 都必須驗證才能使用
-builder.Services.AddMvc(options =>
-{
-    options.Filters.Add(new AuthorizeFilter());
-});
-
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<WebContext>(options =>
@@ -62,6 +40,32 @@ builder.Services.AddScoped<ITodoListRepository, TodoListRepository>();
 builder.Services.AddScoped<ITodoListService, TodoLinqService>();
 builder.Services.AddScoped<ITodoListService, TodoAutoMapperService>();
 builder.Services.AddScoped<ITodoListService, TodoListRService>();
+
+//63.【12.身分驗證】ASP.NET Core Web API 入門教學(12_3) - 取得登入使用者資訊與內建or自己打造閒談
+builder.Services.AddHttpContextAccessor();
+
+// 設定 Cookie 式登入驗證，指定登入登出 Action
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
+    {
+        //未登入時會自動導到這個網址
+        options.LoginPath = new PathString("/api/Login/NoLogin");
+        //options.LoginPath = "/Auth/Login";
+        //options.LogoutPath = "/Auth/Logout";
+        //options.AccessDeniedPath = "/Auth/AccessDenied";
+        //沒有權限時，會自動導到這個網址
+        options.AccessDeniedPath = new PathString("/api/Login/NoAccess");
+        // 全部的cooike都會受影響
+        //options.ExpireTimeSpan=TimeSpan.FromSeconds(5); // 登入多久會失效
+
+    });
+
+// 全部的controller 的API, 都必須驗證才能使用
+builder.Services.AddMvc(options =>
+{
+    options.Filters.Add(new AuthorizeFilter());
+});
+
 
 builder.Services.AddScoped<AsyncService>();
 builder.Services.AddScoped<TodoListAsyncService>();

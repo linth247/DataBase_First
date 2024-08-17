@@ -42,6 +42,7 @@ namespace WebAPI.Controllers
                     new Claim("FullName", user.Name), // 加上使用者的資訊
                    // new Claim(ClaimTypes.Role, "Administrator")
                    // new Claim(ClaimTypes.Role, "select")
+                   new Claim("EmployeeId", user.EmployeeId.ToString())
                 };
 
                 var role = from a in _todoContext.Role

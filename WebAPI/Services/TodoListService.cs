@@ -11,12 +11,17 @@ namespace WebAPI.Services
     {
         private readonly WebContext _todoContext;
         private readonly IMapper _mapper;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public TodoListService(WebContext todoContext, IMapper mapper)
+        public TodoListService(
+            WebContext todoContext, 
+            IMapper mapper, 
+            IHttpContextAccessor httpContextAccessor)
         //public TodoController(WebContext todoContext)
         {
             _todoContext = todoContext;
             _mapper = mapper;
+            _httpContextAccessor = httpContextAccessor;
         }
         public TodoListService()
         {
@@ -75,6 +80,11 @@ namespace WebAPI.Services
 
         public TodoList 新增資料(TodoListPostDto value)
         {
+            //63.【12.身分驗證】ASP.NET Core Web API 入門教學(12_3) - 取得登入使用者資訊與內建or自己打造閒談
+            var Claim = _httpContextAccessor.HttpContext.User.Claims.ToList();
+
+            var employeeid = Claim.Where(a=>a.Type=="EmployeeId").First().Value;
+
             TodoList insert = new TodoList
             {
                 //Name = value.Name,
@@ -82,8 +92,10 @@ namespace WebAPI.Services
                 //Orders = value.Orders,
                 InsertTime = DateTime.Now,
                 UpdateTime = DateTime.Now,
-                InsertEmployeeId = Guid.Parse("8840a700-35a4-4301-93aa-f172a28a7583"),
-                UpdateEmployeeId = Guid.Parse("63F8FD9D-E045-4C78-A491-96EABE1D2024"),
+                //InsertEmployeeId = Guid.Parse("8840a700-35a4-4301-93aa-f172a28a7583"),
+                //UpdateEmployeeId = Guid.Parse("63F8FD9D-E045-4C78-A491-96EABE1D2024"),                
+                InsertEmployeeId = Guid.Parse(employeeid),
+                UpdateEmployeeId = Guid.Parse(employeeid),
                 //UploadFiles = value.UploadFiles // 同時加上子資料
                 //UploadFiles = up1 // 同時加上子資料
             };
