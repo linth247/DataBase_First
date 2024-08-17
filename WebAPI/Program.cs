@@ -40,6 +40,7 @@ builder.Services.AddScoped<ITodoListService, TodoLinqService>();
 builder.Services.AddScoped<ITodoListService, TodoAutoMapperService>();
 builder.Services.AddScoped<ITodoListService, TodoListRService>();
 
+builder.Services.AddScoped<AsyncService>();
 
 var app = builder.Build();
 

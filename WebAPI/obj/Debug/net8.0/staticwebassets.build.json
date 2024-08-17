@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/74IwovKS94z8BEPTRzJkev+HY7V6ClbX0xmGSPLP8U=",
+  "Hash": "eVu9rrpoYF6uIfJppT4RNRbKprOeXsbq/ZGJv2hue0Y=",
   "Source": "WebAPI",
   "BasePath": "_content/WebAPI",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\88.txt"
+    },
+    {
+      "Identity": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\wwwroot\\UploadFiles\\420adbd4-d23e-44ef-9b1f-fd8a31ab4f6f\\88.txt",
+      "SourceId": "WebAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\wwwroot\\",
+      "BasePath": "_content/WebAPI",
+      "RelativePath": "UploadFiles/420adbd4-d23e-44ef-9b1f-fd8a31ab4f6f/88.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UploadFiles\\420adbd4-d23e-44ef-9b1f-fd8a31ab4f6f\\88.txt"
     },
     {
       "Identity": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\wwwroot\\UploadFiles\\450e22de-f9c1-44e2-948b-2f8f734118cb\\77.txt",
