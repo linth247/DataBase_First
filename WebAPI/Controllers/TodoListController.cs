@@ -12,6 +12,7 @@ using AutoMapper;
 using Microsoft.Data.SqlClient;
 using System.Text.Json;
 using WebAPI.Services;
+using Microsoft.AspNetCore.Authorization;
 //using AutoMapper;
 
 
@@ -43,6 +44,7 @@ namespace WebAPI.Controllers
 
         // GET: api/<TodoController>
         [HttpGet]
+        //[Authorize]
         //public IEnumerable<TodoListDto> Get([FromQuery] TodoSelectParameter value)
         public IActionResult Get([FromQuery] TodoSelectParameter value)
         {

@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Todo.Services;
 using WebAPI.Interfaces;
@@ -8,6 +10,22 @@ using WebAPI.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+// 設定 Cookie 式登入驗證，指定登入登出 Action
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
+    {
+        //未登入時會自動導到這個網址
+        options.LoginPath = new PathString("/api/Login/NoLogin");
+        //options.LoginPath = "/Auth/Login";
+        //options.LogoutPath = "/Auth/Logout";
+        //options.AccessDeniedPath = "/Auth/AccessDenied";
+    });
+
+// 全部的controller 的API, 都必須驗證才能使用
+builder.Services.AddMvc(options =>
+{
+    options.Filters.Add(new AuthorizeFilter());
+});
 
 builder.Services.AddControllers();
 
@@ -49,6 +67,9 @@ var app = builder.Build();
 
 app.UseHttpsRedirection();
 
+// 啟用身分認證
+app.UseCookiePolicy();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
