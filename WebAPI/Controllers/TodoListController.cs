@@ -13,6 +13,7 @@ using Microsoft.Data.SqlClient;
 using System.Text.Json;
 using WebAPI.Services;
 using Microsoft.AspNetCore.Authorization;
+using WebAPI.Filters;
 //using AutoMapper;
 
 
@@ -43,8 +44,12 @@ namespace WebAPI.Controllers
         }
 
         // GET: api/<TodoController>
+        //[TypeFilter(typeof(TodoAuthorizationFilter))]
+        //[TodoAuthorizationFilter] // 繼承了Attribute，就可以省略一些字，但是要放在全域
+        
         [HttpGet]
-        [Authorize(Roles = "select")]
+        [TodoAuthorizationFilter2(Roles ="select")]
+        //[Authorize(Roles = "select")]
         //[Authorize]
         //public IEnumerable<TodoListDto> Get([FromQuery] TodoSelectParameter value)
         public IActionResult Get([FromQuery] TodoSelectParameter value)
@@ -100,7 +105,7 @@ namespace WebAPI.Controllers
         // GET api/Todo/1f3012b6-71ae-4e74-88fd-018ed53ed2d3
         //https://localhost:7232/api/todo/450e22de-f9c1-44e2-948b-2f8f734118cb
         [HttpGet("{TodoId}")]
-        [Authorize(Roles ="select")]
+        //[Authorize(Roles ="select")]
         //public TodoListDto Get(Guid id)
         public ActionResult<TodoListDto> GetOne(Guid TodoId)
         {
@@ -153,7 +158,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("AutoMapper")]
-        [Authorize(Roles = "automapper")]
+        //[Authorize(Roles = "automapper")]
         public IEnumerable<TodoListDto> GetAutoMapper([FromQuery] TodoSelectParameter value)
         {
             //var result = _todoContext.TodoList

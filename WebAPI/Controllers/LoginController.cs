@@ -163,6 +163,7 @@ namespace WebAPI.Controllers
             }
         }
 
+        // 測試
         [AllowAnonymous]
         [HttpGet("jwt")]
         public IActionResult Get(string userName, string pwd)
