@@ -1,6 +1,10 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using Todo.Services;
 using WebAPI.Interfaces;
 using WebAPI.Models;
@@ -45,22 +49,57 @@ builder.Services.AddScoped<ITodoListService, TodoListRService>();
 builder.Services.AddHttpContextAccessor();
 
 // 設定 Cookie 式登入驗證，指定登入登出 Action
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
+//builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+//    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
+//    {
+//        //未登入時會自動導到這個網址
+//        options.LoginPath = new PathString("/api/Login/NoLogin");
+//        //options.LoginPath = "/Auth/Login";
+//        //options.LogoutPath = "/Auth/Logout";
+//        //options.AccessDeniedPath = "/Auth/AccessDenied";
+//        //沒有權限時，會自動導到這個網址
+//        options.AccessDeniedPath = new PathString("/api/Login/NoAccess");
+//        // 全部的cooike都會受影響
+//        //options.ExpireTimeSpan=TimeSpan.FromSeconds(5); // 登入多久會失效
+
+//    });
+
+//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+//.AddJwtBearer(options =>
+//{
+//    options.TokenValidationParameters = new TokenValidationParameters
+//    {
+//        ValidateIssuer = true,
+//        ValidIssuer = builder.Configuration["Jwt:Issuer"], // 發行者，一定是todo.com
+//        ValidateAudience = true,
+//        ValidAudience = builder.Configuration["Jwt:Audience"], // 接收者，一定是my, 才會過
+//        ValidateLifetime = true, // 到期時間，就不能讀，預設true
+//        // 金鑰
+//        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:KEY"]))
+//    };
+//});
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(o =>
+{
+    o.TokenValidationParameters = new TokenValidationParameters
     {
-        //未登入時會自動導到這個網址
-        options.LoginPath = new PathString("/api/Login/NoLogin");
-        //options.LoginPath = "/Auth/Login";
-        //options.LogoutPath = "/Auth/Logout";
-        //options.AccessDeniedPath = "/Auth/AccessDenied";
-        //沒有權限時，會自動導到這個網址
-        options.AccessDeniedPath = new PathString("/api/Login/NoAccess");
-        // 全部的cooike都會受影響
-        //options.ExpireTimeSpan=TimeSpan.FromSeconds(5); // 登入多久會失效
+        ValidIssuer = builder.Configuration["JWT:Issuer"],
+        ValidAudience = builder.Configuration["JWT:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey
+        (Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"])),
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = false,
+        ValidateIssuerSigningKey = true
+    };
+});
+builder.Services.AddAuthorization();
 
-    });
-
-// 全部的controller 的API, 都必須驗證才能使用
+// 全部的controller 的API, 都必須受登入的控制，驗證才能使用
 builder.Services.AddMvc(options =>
 {
     options.Filters.Add(new AuthorizeFilter());
@@ -77,7 +116,7 @@ var app = builder.Build();
 app.UseHttpsRedirection();
 
 // 啟用身分認證
-app.UseCookiePolicy();
+//app.UseCookiePolicy();
 app.UseAuthentication();
 app.UseAuthorization();
 

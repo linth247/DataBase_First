@@ -44,6 +44,7 @@ namespace WebAPI.Controllers
 
         // GET: api/<TodoController>
         [HttpGet]
+        [Authorize(Roles = "select")]
         //[Authorize]
         //public IEnumerable<TodoListDto> Get([FromQuery] TodoSelectParameter value)
         public IActionResult Get([FromQuery] TodoSelectParameter value)
@@ -149,8 +150,6 @@ namespace WebAPI.Controllers
             //return ItemToDto(result); // 函式化
             return result;
             //return Ok(result);
-
-
         }
 
         [HttpGet("AutoMapper")]

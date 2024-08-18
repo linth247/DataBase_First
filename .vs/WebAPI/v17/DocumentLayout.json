@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\codes\\WebAPI\\DataBase_First\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\services\\todolistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\services\\todolistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\controllers\\todolistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\todolistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,8 +11,24 @@
       "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\services\\todolistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\services\\todolistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\models\\webcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,66 +50,106 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAIsAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-17T14:59:33.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAADwvxYAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T01:41:08.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAjwCMAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T01:40:18.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "WebAPI\\appsettings.Development.json",
+              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\appsettings.Development.json",
+              "RelativeToolTip": "WebAPI\\appsettings.Development.json",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAcwA4AAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-17T15:54:14.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "TodoListService.cs",
               "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Services\\TodoListService.cs",
               "RelativeDocumentMoniker": "WebAPI\\Services\\TodoListService.cs",
               "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Services\\TodoListService.cs",
               "RelativeToolTip": "WebAPI\\Services\\TodoListService.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAIwFIAAAAOAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-17T15:37:29.858Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "TodoListController.cs",
               "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\TodoListController.cs",
               "RelativeDocumentMoniker": "WebAPI\\Controllers\\TodoListController.cs",
               "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\TodoListController.cs",
               "RelativeToolTip": "WebAPI\\Controllers\\TodoListController.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAACkAAAAAAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAiwC4AAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-17T15:31:35.959Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Program.cs",
               "RelativeDocumentMoniker": "WebAPI\\Program.cs",
               "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Program.cs",
               "RelativeToolTip": "WebAPI\\Program.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAuwC4AAAAgAAAA",
+              "ViewState": "AQIAAFoAAAAAAAAAAADwv3YAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-17T15:20:08.002Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "WebContext.cs",
               "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Models\\WebContext.cs",
               "RelativeDocumentMoniker": "WebAPI\\Models\\WebContext.cs",
               "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Models\\WebContext.cs",
               "RelativeToolTip": "WebAPI\\Models\\WebContext.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBZwAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T15:02:23.821Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\LoginController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T14:59:33.557Z",
+              "WhenOpened": "2024-08-17T15:02:23.821Z",
               "EditorCaption": ""
             }
           ]
