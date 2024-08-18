@@ -130,7 +130,8 @@ namespace WebAPI.Controllers
                    // new Claim(ClaimTypes.Role, "Administrator")
                    // new Claim(ClaimTypes.Role, "select")
                    //new Claim("EmployeeId", user.EmployeeId.ToString())
-                   new Claim(JwtRegisteredClaimNames.NameId, user.EmployeeId.ToString())
+                   new Claim(JwtRegisteredClaimNames.NameId, user.EmployeeId.ToString()),
+                   new Claim("EmployeeId", user.EmployeeId.ToString())
                 };
 
                 var role = from a in _todoContext.Role

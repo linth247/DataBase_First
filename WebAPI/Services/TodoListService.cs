@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using WebAPI.Dtos;
 using WebAPI.Models;
 using WebAPI.Parameters;
+using System.Security.Claims;
 
 namespace WebAPI.Services
 {
@@ -81,9 +82,13 @@ namespace WebAPI.Services
         public TodoList 新增資料(TodoListPostDto value)
         {
             //63.【12.身分驗證】ASP.NET Core Web API 入門教學(12_3) - 取得登入使用者資訊與內建or自己打造閒談
-            var Claim = _httpContextAccessor.HttpContext.User.Claims.ToList();
+            //var Claim = _httpContextAccessor.HttpContext.User.Claims.ToList();
+            //var employeeid = Claim.Where(a=>a.Type=="EmployeeId").First().Value;
 
-            var employeeid = Claim.Where(a=>a.Type=="EmployeeId").First().Value;
+            var employeeid = _httpContextAccessor.HttpContext.User.FindFirst("EmployeeId").Value;
+
+            //new Claim(JwtRegisteredClaimNames.Email, user.Account), 從這邊設定取得
+            var email = _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Email).Value;
 
             TodoList insert = new TodoList
             {
