@@ -108,8 +108,9 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddMvc(options =>
 {
     //options.Filters.Add(new AuthorizeFilter());
-    //options.Filters.Add(new TodoAuthorizationFilter());
+    options.Filters.Add(new TodoAuthorizationFilter());
     //options.Filters.Add(new TodoAuthorizationFilter2());
+    options.Filters.Add(typeof(TodoActionFilter)); // 有建構子可以這樣寫
 });
 
 
