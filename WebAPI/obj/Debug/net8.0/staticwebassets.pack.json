@@ -1,12 +1,28 @@
 {
   "Files": [
     {
+      "Id": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\wwwroot\\12_2範例檔.zip",
+      "PackagePath": "staticwebassets\\12_2範例檔.zip"
+    },
+    {
       "Id": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\wwwroot\\77.txt",
       "PackagePath": "staticwebassets\\77.txt"
     },
     {
       "Id": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\wwwroot\\88.txt",
       "PackagePath": "staticwebassets\\88.txt"
+    },
+    {
+      "Id": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\wwwroot\\DM_2308.pdf",
+      "PackagePath": "staticwebassets\\DM_2308.pdf"
+    },
+    {
+      "Id": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\wwwroot\\KGI_CA.exe",
+      "PackagePath": "staticwebassets\\KGI_CA.exe"
+    },
+    {
+      "Id": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\wwwroot\\UploadFiles\\304f9805-f4fa-4357-8143-25864fa64d97\\DM_2308.pdf",
+      "PackagePath": "staticwebassets\\UploadFiles\\304f9805-f4fa-4357-8143-25864fa64d97\\DM_2308.pdf"
     },
     {
       "Id": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\wwwroot\\UploadFiles\\420adbd4-d23e-44ef-9b1f-fd8a31ab4f6f\\88.txt",

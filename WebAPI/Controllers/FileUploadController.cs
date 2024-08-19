@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Drawing;
+using WebAPI.Filters;
 using WebAPI.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -28,6 +29,12 @@ namespace WebAPI.Controllers
         //[HttpPost("From")]
         //[HttpPost("{id}")]
         [HttpPost]
+        //[DisableRequestSizeLimit]
+        //[TodoAuthorizationFilter2(Roles = "select")]
+        //[FileLimit(Size=1)]
+        //[FileLimit]
+        [FileLimit(1)]
+        //[RequestSizeLimit(3333)] // 限制上傳檔案大小
         public async Task<IActionResult> Post(IFormFileCollection files, [FromForm] Guid id)
         {
             //var rootPath = _env.ContentRootPath + @"\\wwwroot\\";

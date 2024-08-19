@@ -30,23 +30,30 @@ namespace WebAPI.Filters
             //var Claim = _httpContextAccessor.HttpContext.User.Claims.ToList();
             //var employeeid = Claim.Where(a => a.Type == "EmployeeId").First().Value;
 
-            var role =(from a in _todoContext.Role
-                     where a.Name == Roles // 先撈全部
-                     //&&  a.EmployeeId == // 還要加上是哪個使用者
-                     select a).FirstOrDefault();
+            //當設定為全域驗證，要不受驗證邏輯的方法
+            var ignore = (from a in context.ActionDescriptor.EndpointMetadata
+                          where a.GetType() == typeof(AllowAnonymousAttribute)
+                          select a).FirstOrDefault();
 
-            // 有抓到select
-            if (role == null)
+            if (ignore == null)
             {
-                context.Result = new JsonResult(new ReturnJson()
+
+                var role = (from a in _todoContext.Role
+                            where a.Name == Roles // 先撈全部
+                            //&&  a.EmployeeId == // 還要加上是哪個使用者
+                            select a).FirstOrDefault();
+
+                if (role == null)
                 {
-                    Data = Roles,
-                    HttpCode = 401,
-                    ErrorMessage = "沒有登入"
-                });
+                    // 沒有抓到select
+                    context.Result = new JsonResult(new ReturnJson()
+                    {
+                        Data = Roles,
+                        HttpCode = 401,
+                        ErrorMessage = "沒有登入"
+                    });
+                }
             }
-
-
         }
     }
 }

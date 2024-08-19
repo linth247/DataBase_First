@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -107,12 +108,31 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddMvc(options =>
 {
     //options.Filters.Add(new AuthorizeFilter());
-    options.Filters.Add(new TodoAuthorizationFilter());
+    //options.Filters.Add(new TodoAuthorizationFilter());
+    //options.Filters.Add(new TodoAuthorizationFilter2());
 });
 
 
 builder.Services.AddScoped<AsyncService>();
 builder.Services.AddScoped<TodoListAsyncService>();
+
+
+//builder.WebHost.UseKestrel(options =>
+//{
+//    options.Limits.MaxRequestLineSize = 10 * 1024 * 1024;
+//    options.Limits.MaxRequestBufferSize = 10 * 1024 * 1024;
+//    //options.Limits.MaxRequestBodySize = 10 * 1024 * 1024;
+//    options.Limits.MaxRequestBodySize = 10 * 1024 * 1024;
+//});
+
+builder.Services.Configure<FormOptions>(x =>
+{
+    x.ValueCountLimit = 10;
+    x.ValueLengthLimit = int.MaxValue;
+    //x.MultipartBodyLengthLimit = 10 * 1024 * 1024; // 10MB
+    x.MultipartBodyLengthLimit = long.MaxValue; // 10MB
+    x.MemoryBufferThreshold = 10 * 1024 * 1024; // 1MB
+});
 
 var app = builder.Build();
 
