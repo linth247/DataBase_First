@@ -85,10 +85,10 @@ namespace WebAPI.Services
             //var Claim = _httpContextAccessor.HttpContext.User.Claims.ToList();
             //var employeeid = Claim.Where(a=>a.Type=="EmployeeId").First().Value;
 
-            var employeeid = _httpContextAccessor.HttpContext.User.FindFirst("EmployeeId").Value;
+            //var employeeid = _httpContextAccessor.HttpContext.User.FindFirst("EmployeeId").Value;
 
             //new Claim(JwtRegisteredClaimNames.Email, user.Account), 從這邊設定取得
-            var email = _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Email).Value;
+            //var email = _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Email).Value;
 
             TodoList insert = new TodoList
             {
@@ -97,10 +97,10 @@ namespace WebAPI.Services
                 //Orders = value.Orders,
                 InsertTime = DateTime.Now,
                 UpdateTime = DateTime.Now,
-                //InsertEmployeeId = Guid.Parse("8840a700-35a4-4301-93aa-f172a28a7583"),
-                //UpdateEmployeeId = Guid.Parse("63F8FD9D-E045-4C78-A491-96EABE1D2024"),                
-                InsertEmployeeId = Guid.Parse(employeeid),
-                UpdateEmployeeId = Guid.Parse(employeeid),
+                InsertEmployeeId = Guid.Parse("8840a700-35a4-4301-93aa-f172a28a7583"),
+                UpdateEmployeeId = Guid.Parse("63F8FD9D-E045-4C78-A491-96EABE1D2024"),
+                //InsertEmployeeId = Guid.Parse(employeeid),
+                //UpdateEmployeeId = Guid.Parse(employeeid),
                 //UploadFiles = value.UploadFiles // 同時加上子資料
                 //UploadFiles = up1 // 同時加上子資料
             };

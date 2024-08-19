@@ -48,7 +48,7 @@ namespace WebAPI.Controllers
         //[TodoAuthorizationFilter] // 繼承了Attribute，就可以省略一些字，但是要放在全域
         
         [HttpGet]
-        [TodoAuthorizationFilter2(Roles ="select")]
+        //[TodoAuthorizationFilter2(Roles ="select")]
         //[Authorize(Roles = "select")]
         //[Authorize]
         //public IEnumerable<TodoListDto> Get([FromQuery] TodoSelectParameter value)

@@ -7,5 +7,6 @@ namespace WebAPI.Dtos
         public dynamic Data { get; set; }
         public int HttpCode { get; set; }
         public string ErrorMessage { get; set; }
+        public dynamic Error {  get; set; }
     }
 }
