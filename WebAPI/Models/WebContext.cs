@@ -25,6 +25,8 @@ public partial class WebContext : DbContext
 
     public virtual DbSet<UploadFile> UploadFile { get; set; }
 
+    public virtual DbSet<Users> Users { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Employee>(entity =>
@@ -87,12 +89,10 @@ public partial class WebContext : DbContext
 
         modelBuilder.Entity<Role>(entity =>
         {
-            entity.HasNoKey();
-
+            entity.Property(e => e.RoleId).HasDefaultValueSql("(newid())");
             entity.Property(e => e.Name)
                 .IsRequired()
                 .HasMaxLength(50);
-            entity.Property(e => e.RoleId).HasDefaultValueSql("(newid())");
         });
 
         modelBuilder.Entity<TodoList>(entity =>
@@ -119,8 +119,6 @@ public partial class WebContext : DbContext
 
         modelBuilder.Entity<UploadFile>(entity =>
         {
-            entity.HasKey(e => e.UploadFileId).HasName("PK_UploadFile");
-
             entity.Property(e => e.UploadFileId).HasDefaultValueSql("(newid())");
             entity.Property(e => e.Name)
                 .IsRequired()
@@ -130,6 +128,14 @@ public partial class WebContext : DbContext
                 .HasForeignKey(d => d.TodoId)
                 //.OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_UploadFile_TodoList");
+        });
+
+        modelBuilder.Entity<Users>(entity =>
+        {
+            entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.Property(e => e.Name)
+                .IsRequired()
+                .HasMaxLength(50);
         });
 
         OnModelCreatingPartial(modelBuilder);

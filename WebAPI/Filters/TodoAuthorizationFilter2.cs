@@ -9,7 +9,7 @@ namespace WebAPI.Filters
 {
     public class TodoAuthorizationFilter2 : Attribute, IAuthorizationFilter
     {
-        public string Roles = "";
+        public string Roles="";
         //private readonly IHttpContextAccessor _httpContextAccessor;
         public TodoAuthorizationFilter2()
         {
@@ -17,6 +17,11 @@ namespace WebAPI.Filters
         }
         public void OnAuthorization(AuthorizationFilterContext context)
         {
+            Console.WriteLine("Roles:"+ Roles);
+
+            bool tokenFlag = context.HttpContext.Request
+                .Headers.TryGetValue("Authorization", out StringValues outValue);
+
             //取得服務
             WebContext _todoContext= (WebContext)context.
                 HttpContext.RequestServices.GetService(typeof(WebContext));
@@ -25,6 +30,7 @@ namespace WebAPI.Filters
                 HttpContext.RequestServices.GetService(typeof(IHttpContextAccessor));
 
 
+            //// 還要加上是哪個使用者
             //var employeeid = _httpContextAccessor.HttpContext.User.FindFirst("EmployeeId").Value;
 
             //var Claim = _httpContextAccessor.HttpContext.User.Claims.ToList();

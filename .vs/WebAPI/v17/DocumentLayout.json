@@ -3,64 +3,16 @@
   "WorkspaceRootPath": "C:\\codes\\WebAPI\\DataBase_First\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\filters\\todoresultfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\filters\\todoresultfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\services\\todolistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\services\\todolistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\controllers\\todolistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\todolistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\dtos\\returnjson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\dtos\\returnjson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\filters\\todoauthorizationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\filters\\todoauthorizationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\filters\\todoactionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\filters\\todoactionfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\filters\\todoauthorizationfilter2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\filters\\todoauthorizationfilter2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\controllers\\fileuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\fileuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\filters\\filelimitattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\filters\\filelimitattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\abstracts\\todolisteditdtoabstract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\abstracts\\todolisteditdtoabstract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\models\\webcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\webcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|c:\\codes\\webapi\\database_first\\webapi\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{935BE83D-9F8D-42B2-AA1A-5BFF0F2DF6DE}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,201 +22,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\.gitignore",
+              "RelativeDocumentMoniker": "WebAPI\\.gitignore",
+              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\.gitignore",
+              "RelativeToolTip": "WebAPI\\.gitignore",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-21T03:38:57.707Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TodoResultFilter.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Filters\\TodoResultFilter.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Filters\\TodoResultFilter.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Filters\\TodoResultFilter.cs",
-              "RelativeToolTip": "WebAPI\\Filters\\TodoResultFilter.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAwBsAAAA6AAAA",
+              "DocumentIndex": 2,
+              "Title": "Users.cs",
+              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Models\\Users.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Models\\Users.cs",
+              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Models\\Users.cs",
+              "RelativeToolTip": "WebAPI\\Models\\Users.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T07:45:22.811Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TodoActionFilter.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Filters\\TodoActionFilter.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Filters\\TodoActionFilter.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Filters\\TodoActionFilter.cs",
-              "RelativeToolTip": "WebAPI\\Filters\\TodoActionFilter.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAAA4AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T05:40:45.776Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FileUploadController.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\FileUploadController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\FileUploadController.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\FileUploadController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\FileUploadController.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAAwCgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-18T14:00:09.397Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FileLimitAttribute.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Filters\\FileLimitAttribute.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Filters\\FileLimitAttribute.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Filters\\FileLimitAttribute.cs",
-              "RelativeToolTip": "WebAPI\\Filters\\FileLimitAttribute.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAUwCIAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-18T13:54:18.075Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TodoAuthorizationFilter.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Filters\\TodoAuthorizationFilter.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Filters\\TodoAuthorizationFilter.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Filters\\TodoAuthorizationFilter.cs",
-              "RelativeToolTip": "WebAPI\\Filters\\TodoAuthorizationFilter.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAywA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-18T12:48:57.172Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-20T15:32:37.978Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TodoListService.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Services\\TodoListService.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Services\\TodoListService.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Services\\TodoListService.cs",
-              "RelativeToolTip": "WebAPI\\Services\\TodoListService.cs",
-              "ViewState": "AQIAAFUAAAAAAAAAAAAgwFoAAAAOAAAA",
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAuwBQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T15:37:29.858Z",
+              "WhenOpened": "2024-08-20T15:28:00.685Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TodoAuthorizationFilter2.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Filters\\TodoAuthorizationFilter2.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Filters\\TodoAuthorizationFilter2.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Filters\\TodoAuthorizationFilter2.cs",
-              "RelativeToolTip": "WebAPI\\Filters\\TodoAuthorizationFilter2.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAowDAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-18T13:25:30.922Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TodoListController.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\TodoListController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\TodoListController.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\TodoListController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\TodoListController.cs",
-              "ViewState": "AQIAADABAAAAAAAAAAAmwDkAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T15:31:35.959Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Program.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Program.cs",
-              "RelativeToolTip": "WebAPI\\Program.cs",
-              "ViewState": "AQIAAGEAAAAAAAAAAAAtwG8AAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T15:20:08.002Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ReturnJson.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Dtos\\ReturnJson.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Dtos\\ReturnJson.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Dtos\\ReturnJson.cs",
-              "RelativeToolTip": "WebAPI\\Dtos\\ReturnJson.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-18T12:54:21.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "TodoListEditDtoAbstract.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Abstracts\\TodoListEditDtoAbstract.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Abstracts\\TodoListEditDtoAbstract.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Abstracts\\TodoListEditDtoAbstract.cs",
-              "RelativeToolTip": "WebAPI\\Abstracts\\TodoListEditDtoAbstract.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAgwAsAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-18T12:34:53.494Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAjwCMAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-18T01:40:18.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "WebAPI\\appsettings.Development.json",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\appsettings.Development.json",
-              "RelativeToolTip": "WebAPI\\appsettings.Development.json",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAcwBEAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-17T15:54:14.782Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\LoginController.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAuwDQAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T14:59:33.557Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "WebContext.cs",
-              "DocumentMoniker": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Models\\WebContext.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Models\\WebContext.cs",
-              "ToolTip": "C:\\codes\\WebAPI\\DataBase_First\\WebAPI\\Models\\WebContext.cs",
-              "RelativeToolTip": "WebAPI\\Models\\WebContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAIBZwAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T15:02:23.821Z"
             }
           ]
         }

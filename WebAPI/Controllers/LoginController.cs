@@ -28,6 +28,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost]
+        //-----------------------------
         //使用Cookie
         public string login(LoginPost value)
         {
@@ -104,6 +105,7 @@ namespace WebAPI.Controllers
             }
         }
 
+        //-----------------------------
         //使用jwt
         [HttpPost("jwtLogin")]
         public string jwtLogin(LoginPost value)
@@ -131,7 +133,7 @@ namespace WebAPI.Controllers
                    // new Claim(ClaimTypes.Role, "select")
                    //new Claim("EmployeeId", user.EmployeeId.ToString())
                    new Claim(JwtRegisteredClaimNames.NameId, user.EmployeeId.ToString()),
-                   new Claim("EmployeeId", user.EmployeeId.ToString())
+                   new Claim("EmployeeId", user.EmployeeId.ToString()) // EmployeeId 要在Login設定，才取得到
                 };
 
                 var role = from a in _todoContext.Role
@@ -145,14 +147,16 @@ namespace WebAPI.Controllers
                     //claims.Add(new Claim(JwtRegisteredClaimNames.Sub, temp.Name));
                 }
 
-                //產生JWT
+                //產生JWT token
                 var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:KEY"]));
 
-                var jwt = new JwtSecurityToken(
+                //jwt 初始化設定
+                var jwt = new JwtSecurityToken
+                (
                     issuer: _configuration["JWT:Issuer"], // 發行者
                     audience: _configuration["JWT:Audience"], // 給誰使用
                     claims: claims,
-                    expires: DateTime.Now.AddMinutes(30), // 期限
+                    expires: DateTime.Now.AddMinutes(30), // 設定期限
                     // 金鑰產生
                     signingCredentials: new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256)
                 );

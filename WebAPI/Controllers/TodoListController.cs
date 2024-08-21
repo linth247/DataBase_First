@@ -44,12 +44,12 @@ namespace WebAPI.Controllers
         }
 
         // GET: api/<TodoController>
-        //[TypeFilter(typeof(TodoAuthorizationFilter))]
+        //[TypeFilter(typeof(TodoAuthorizationFilter))]  // 受到TodoAuthorizationFilter控制
         //[TodoAuthorizationFilter] // 繼承了Attribute，就可以省略一些字，但是要放在全域
-        
+
         [HttpGet]
         //[TodoAuthorizationFilter2(Roles ="select")]
-        //[Authorize(Roles = "select")]
+        //[Authorize(Roles = "select")] // 內建的
         //[Authorize]
         //public IEnumerable<TodoListDto> Get([FromQuery] TodoSelectParameter value)
         public IActionResult Get([FromQuery] TodoSelectParameter value)
@@ -105,7 +105,7 @@ namespace WebAPI.Controllers
         // GET api/Todo/1f3012b6-71ae-4e74-88fd-018ed53ed2d3
         //https://localhost:7232/api/todo/450e22de-f9c1-44e2-948b-2f8f734118cb
         [HttpGet("{TodoId}")]
-        //[Authorize(Roles ="select")]
+        //[Authorize(Roles ="select")] // 內建的
         //public TodoListDto Get(Guid id)
         public ActionResult<TodoListDto> GetOne(Guid TodoId)
         {
@@ -265,6 +265,7 @@ namespace WebAPI.Controllers
 
         // POST api/<TodoController>
         [HttpPost]
+        [TodoAuthorizationFilter2(Roles = "select")]
         public IActionResult Post([FromBody] TodoListPostDto value)
         {
             //if (!ModelState.IsValid)

@@ -19,9 +19,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<WebContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("WebDatabase")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("WebDatabase")));
 builder.Services.AddDbContext<WebContext2>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("WebDatabase")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("WebDatabase")));
 //builder.Services.AddAutoMapper(typeof(UserRoleReMapperConfig));
 builder.Services.AddAutoMapper(typeof(TodoListProfile));
 builder.Services.AddAutoMapper(typeof(UploadFileProfile));
@@ -50,6 +50,8 @@ builder.Services.AddScoped<ITodoListService, TodoListRService>();
 //63.【12.身分驗證】ASP.NET Core Web API 入門教學(12_3) - 取得登入使用者資訊與內建or自己打造閒談
 builder.Services.AddHttpContextAccessor();
 
+//-------------------------------------
+// Cookie驗證
 // 設定 Cookie 式登入驗證，指定登入登出 Action
 //builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
 //    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
@@ -66,22 +68,25 @@ builder.Services.AddHttpContextAccessor();
 
 //    });
 
+//-------------------------------------
+//JWT驗證(內建的)
 //builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 //.AddJwtBearer(options =>
 //{
 //    options.TokenValidationParameters = new TokenValidationParameters
 //    {
-//        ValidateIssuer = true,
+//        ValidateIssuer = true,   // 驗證發行者
 //        ValidIssuer = builder.Configuration["Jwt:Issuer"], // 發行者，一定是todo.com
-//        ValidateAudience = true,
+//        ValidateAudience = true, // 驗證接收者
 //        ValidAudience = builder.Configuration["Jwt:Audience"], // 接收者，一定是my, 才會過
 //        ValidateLifetime = true, // 到期時間，就不能讀，預設true
+//        ClockSkew = TimeSpan.Zero, //準確遵照時間過期
 //        // 金鑰
 //        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:KEY"]))
 //    };
 //});
 
-
+// 網路上的
 //builder.Services.AddAuthentication(options =>
 //{
 //    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -102,7 +107,7 @@ builder.Services.AddHttpContextAccessor();
 //    };
 //});
 
-//builder.Services.AddAuthorization();
+//builder.Services.AddAuthorization();  // 這個可以不用
 
 // 全部的controller 的API, 都必須受登入的控制，驗證才能使用
 builder.Services.AddMvc(options =>
@@ -110,6 +115,7 @@ builder.Services.AddMvc(options =>
     //options.Filters.Add(new AuthorizeFilter());
     //options.Filters.Add(new TodoAuthorizationFilter());
     //options.Filters.Add(new TodoAuthorizationFilter2());
+    //options.Filters.Add(typeof(TodoAuthorizationFilter2));
     options.Filters.Add(typeof(TodoActionFilter)); // 有建構子可以這樣寫
     options.Filters.Add(typeof(TodoResultFilter)); // 全區ResultFilter
 });

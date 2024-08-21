@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Drawing;
 using WebAPI.Filters;
@@ -28,12 +29,14 @@ namespace WebAPI.Controllers
         //56.【10.上傳檔案API】ASP.NET Core Web API 入門教學(10_1) - 基本上傳檔案
         //[HttpPost("From")]
         //[HttpPost("{id}")]
+        [TodoAuthorizationFilter2(Roles = "select")]
         [HttpPost]
         //[DisableRequestSizeLimit]
-        //[TodoAuthorizationFilter2(Roles = "select")]
+        
         //[FileLimit(Size=1)]
         //[FileLimit]
         [FileLimit(1)]
+        [AllowAnonymous]
         //[RequestSizeLimit(3333)] // 限制上傳檔案大小
         public async Task<IActionResult> Post(IFormFileCollection files, [FromForm] Guid id)
         {

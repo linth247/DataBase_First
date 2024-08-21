@@ -13,7 +13,7 @@ namespace WebAPI.Filters
             bool tokenFlag = context.HttpContext.Request
                 .Headers.TryGetValue("Authorization", out StringValues outValue);
 
-            //當設定為全域驗證，要不受驗證邏輯的方法
+            //當設定為全域驗證，API不想受驗證，要加上 [AllowAnonymous]
             var ignore = (from a in context.ActionDescriptor.EndpointMetadata
                          where a.GetType () == typeof (AllowAnonymousAttribute)
                          select a).FirstOrDefault();
